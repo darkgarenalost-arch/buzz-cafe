@@ -137,8 +137,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:66px;display:flex;al
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(201,168,76,.09) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(201,168,76,.05) 0%,transparent 50%),linear-gradient(180deg,#080808 0%,#0F0800 50%,#080808 100%)}
 .hero-mandala{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:650px;height:650px;opacity:.05;border-radius:50%;background:repeating-conic-gradient(rgba(201,168,76,.3) 0deg 2deg,transparent 2deg 30deg);mask:radial-gradient(circle,white 30%,transparent 80%)}
 .particles{position:absolute;inset:0;pointer-events:none}
-.ptcl{position:absolute;width:2px;height:2px;background:var(--gold);border-radius:50%;animation:flt linear infinite;opacity:0}
-@keyframes flt{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:.7}90%{opacity:.2}100%{opacity:0;transform:translateY(-80px) scale(1.5)}}
+.ptcl{position:absolute;width:3px;height:3px;background:var(--gold-b);border-radius:50%;animation:flt linear infinite;opacity:0;box-shadow:0 0 6px 3px rgba(240,196,72,.85),0 0 14px 6px rgba(201,168,76,.55),0 0 28px 10px rgba(201,168,76,.25)}
+@keyframes flt{0%{opacity:0;transform:translateY(100vh) scale(0)}8%{opacity:1}85%{opacity:.6}100%{opacity:0;transform:translateY(-80px) scale(2)}}
 .hero-cnt{position:relative;z-index:2;max-width:700px}
 .hero-ey{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-size:.82rem;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:1.5rem}
 .hero-ey::before,.hero-ey::after{content:'';width:28px;height:1px;background:var(--gold);opacity:.5}
@@ -357,6 +357,7 @@ footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:3rem 0
     <a href="#" onclick="nav('about');return false">About</a>
     <a href="#" onclick="nav('pricing');return false">Packages</a>
     <a href="blogs.html">Blogs</a>
+    <a href="online-puja.html">Online Puja</a>
     <a href="#" onclick="nav('contact');return false">Contact</a>
     <a href="#" onclick="nav('booking');return false" class="nav-cta">Book Your Snan →</a>
   </div>
@@ -368,6 +369,7 @@ footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:3rem 0
 <!-- Mobile Menu -->
 <div class="mob-menu" id="mobMenu">
   <a href="#" onclick="nav('home');toggleMob();return false">🏠 Home</a>
+  <a href="online-puja.html">🔱 Online Puja</a>
   <a href="#" onclick="nav('about');toggleMob();return false">ℹ️ About Us</a>
   <a href="#" onclick="nav('pricing');toggleMob();return false">💰 Packages</a>
   <a href="#" onclick="nav('booking');toggleMob();return false">📝 Book Now</a>
@@ -647,6 +649,7 @@ footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:3rem 0
               <li><span class="chk">✓</span><span>Booking confirmation</span></li>
               <li><span class="crs">✗</span><span>E-Certificate of Snan</span></li>
               <li><span class="crs">✗</span><span>Extended puja video</span></li>
+              <li><span class="crs">✗</span><span>video call during snan & chanted mantra by you (5 min)</span></li>
             </ul>
             <button class="btn-o" style="width:100%" onclick="bookPlan('Vyaktigat Personal Snan - ₹501')">Book Personal Snan →</button>
           </div>
@@ -670,7 +673,7 @@ footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:3rem 0
               <li><span class="chk">✓</span><span>Priority booking confirmation</span></li>
               <li><span class="chk">✓</span><span>E-Certificate of Snan</span></li>
               <li><span class="chk">✓</span><span>Extended puja video</span></li>
-              <li><span class="crs">✗</span><span>video call during snan</span></li>
+              <li><span class="crs">✗</span><span>video call during snan & chanted mantra by you (5 min)</span></li>
             </ul>
             <button class="btn-p" style="width:100%" onclick="bookPlan('Parivar Family Snan - ₹1001')">🕉 Book Family Snan →</button>
           </div>
@@ -692,7 +695,8 @@ footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:3rem 0
               <li><span class="chk">✓</span><span>Digital prasad photo</span></li>
               <li><span class="chk">✓</span><span>Priority booking confirmation</span></li>
               <li><span class="chk">✓</span><span>E-Certificate of Snan</span></li>
-              <li><span class="chk">✓</span><span>video call during snan & mantra chanted by you (5 min)</span></li>
+              <li><span class="chk">✓</span><span>Extended puja </span></li>
+              <li><span class="chk">✓</span><span>video call during snan & chanted mantra by you (5 min)</span></li>
             </ul>
             <button class="btn-o" style="width:100%" onclick="bookPlan('Sampoorna Complete Seva - ₹2101')">Book Complete Seva →</button>
           </div>
@@ -969,8 +973,8 @@ const CFG = {
   WA_NUM: '918275872736',
   BUSINESS: 'Kumbh Snan',
   EMAIL: 'info.kumbhsnan@gmail.com',
-  RAZORPAY_KEY: 'rzp_test_SkrMk3QzxEwhXD',
-  GOOGLE_SHEETS_WEB_APP_URL: ''
+  RAZORPAY_KEY: 'rzp_live_SyGiDr3YOJUq7C',
+  GOOGLE_SHEETS_WEB_APP_URL: 'https://script.google.com/macros/s/AKfycbwyLIanPBz96qaULFq68LUuNGPdXDG3bjYOAYefAnXm2BiQx-cadEGRKAYI9w00yXvC/exec'
 };
 const WA = 'https://wa.me/' + CFG.WA_NUM;
 
@@ -1010,14 +1014,17 @@ function bookPlan(planValue) {
 function initParticles() {
   const c = document.getElementById('ptcls');
   if (!c) return;
-  for (let i = 0; i < 22; i++) {
+  for (let i = 0; i < 120; i++) {
     const p = document.createElement('div');
     p.className = 'ptcl';
     p.style.left = (Math.random() * 100) + '%';
-    p.style.animationDuration = (8 + Math.random() * 14) + 's';
-    p.style.animationDelay = (Math.random() * 12) + 's';
-    const sz = (1 + Math.random() * 2.5) + 'px';
+    p.style.animationDuration = (6 + Math.random() * 16) + 's';
+    p.style.animationDelay = (Math.random() * 14) + 's';
+    const sz = (2 + Math.random() * 4) + 'px';
     p.style.width = p.style.height = sz;
+    /* vary glow intensity per particle */
+    const alpha = (0.5 + Math.random() * 0.5).toFixed(2);
+    p.style.boxShadow = `0 0 ${4+Math.random()*6|0}px ${2+Math.random()*4|0}px rgba(240,196,72,${alpha}),0 0 ${12+Math.random()*14|0}px ${5+Math.random()*8|0}px rgba(201,168,76,${(alpha*0.6).toFixed(2)})`;
     c.appendChild(p);
   }
 }
@@ -1123,7 +1130,7 @@ function submitBooking() {
 
 function getPlanAmount(plan) {
   const p = (plan || '').toLowerCase();
-  if (p.includes('vyaktigat')) return 501;
+  if (p.includes('vyaktigat')) return 1;
   if (p.includes('parivar')) return 1001;
   if (p.includes('sampoorna')) return 2101;
   return 0;
