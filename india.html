@@ -673,29 +673,43 @@ footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:2rem 0
   </div>
 </div>
 
+<!-- Razorpay SDK -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 <script>
-// Reveal animation
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
+const RZP_KEY = 'rzp_live_SyGiDr3YOJUq7C';
+const SHEET_ID = '1mpYXO0Ccl_FgICD4Bu8sdT7QffbVzRIr-MjbwYk18QM';
+// Google Apps Script Web App URL — replace with your deployed Apps Script URL
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxQZQZNvZPbLe44-YJQ95bFhUKXGxHFhRHmAoCwSLdOUHwQ7YqbhzDjUcYMFb-Rg3qJ/exec';
+
+// ─── REVEAL ANIMATION ─────────────────────────────────────────────────────────
 const ro = new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');ro.unobserve(x.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-// FAQ
+// ─── FAQ ──────────────────────────────────────────────────────────────────────
 function toggleFaq(btn){
   const a=btn.nextElementSibling,open=btn.classList.contains('open');
   document.querySelectorAll('.faq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open')});
   if(!open){btn.classList.add('open');a.classList.add('open')}
 }
 
-// Plan map
+// ─── PLAN MAP ─────────────────────────────────────────────────────────────────
 const PLANS={
-  'Divya Snan - Ritual + Video - ₹201':{name:'Divya Snan — Ritual + Video',price:'₹201'},
-  'Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501':{name:'Sampoorna Seva — Complete Blessing',price:'₹501'},
+  'Divya Snan - Ritual + Video - ₹201':{name:'Divya Snan — Ritual + Video',price:'₹201',amount:20100},
+  'Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501':{name:'Sampoorna Seva — Complete Blessing',price:'₹501',amount:50100},
 };
 
+// ─── POPUP ────────────────────────────────────────────────────────────────────
 function openPopup(planKey){
   document.getElementById('popupForm').style.display='block';
   document.getElementById('popupThanks').style.display='none';
-  const key=planKey||'Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501';
-  document.getElementById('bPlan').value=key;
+  // Only pre-select if a specific planKey was passed; otherwise leave at placeholder
+  if(planKey){
+    document.getElementById('bPlan').value=planKey;
+  } else {
+    document.getElementById('bPlan').value='';
+  }
   updatePlanPreview();
   document.getElementById('bookingPopup').classList.add('open');
   document.body.style.overflow='hidden';
@@ -715,32 +729,123 @@ function updatePlanPreview(){
   else pr.style.display='none';
 }
 
+// ─── GOOGLE SHEET SUBMISSION ──────────────────────────────────────────────────
+function submitToSheet(data){
+  fetch(SHEET_URL,{
+    method:'POST',
+    mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(data)
+  }).catch(err=>console.error('Sheet submission error:',err));
+}
+
+// ─── RAZORPAY PAYMENT ─────────────────────────────────────────────────────────
 function submitBooking(){
-  const name=document.getElementById('bName').value.trim();
-  const phone=document.getElementById('bPhone').value.trim();
-  const email=document.getElementById('bEmail').value.trim();
-  const plan=document.getElementById('bPlan').value;
-  if(!name){alert('Please enter your full name.');document.getElementById('bName').focus();return}
-  if(!phone){alert('Please enter your WhatsApp number.');document.getElementById('bPhone').focus();return}
-  if(!email){alert('Please enter your email address.');document.getElementById('bEmail').focus();return}
-  if(!plan){alert('Please select a package.');document.getElementById('bPlan').focus();return}
-  const gotra=document.getElementById('bGotra').value.trim();
-  const country=document.getElementById('bCountry').value.trim();
-  const price=plan.includes('501')?501:201;
-  if(typeof fbq!=='undefined'){fbq('track','Purchase',{value:price,currency:'INR'});fbq('track','Lead')}
-  const msg=encodeURIComponent(
-    '🙏 *New Kumbh Snan Booking*\n\n'+
-    '*Name:* '+name+'\n'+
-    '*Gotra:* '+(gotra||'Not provided')+'\n'+
-    '*Package:* '+plan+'\n'+
-    '*WhatsApp:* '+phone+'\n'+
-    '*Email:* '+email+'\n'+
-    '*Country:* '+(country||'Not provided')+'\n\n'+
-    'Please confirm my booking and share payment details. 🕉'
-  );
-  window.open('https://wa.me/918275872736?text='+msg,'_blank');
-  document.getElementById('popupForm').style.display='none';
-  document.getElementById('popupThanks').style.display='block';
+  const name    = document.getElementById('bName').value.trim();
+  const phone   = document.getElementById('bPhone').value.trim();
+  const email   = document.getElementById('bEmail').value.trim();
+  const plan    = document.getElementById('bPlan').value;
+  const gotra   = document.getElementById('bGotra').value.trim();
+  const country = document.getElementById('bCountry').value.trim();
+  const message = document.getElementById('bMessage') ? document.getElementById('bMessage').value.trim() : '';
+
+  // Validation
+  if(!name)   {alert('Please enter your full name.');document.getElementById('bName').focus();return}
+  if(!phone)  {alert('Please enter your WhatsApp number.');document.getElementById('bPhone').focus();return}
+  if(!email)  {alert('Please enter your email address.');document.getElementById('bEmail').focus();return}
+  if(!plan)   {alert('Please select a package.');document.getElementById('bPlan').focus();return}
+
+  const planData = PLANS[plan];
+  if(!planData){alert('Invalid package selected. Please choose again.');return}
+
+  // Disable button to prevent double-click
+  const submitBtn = document.querySelector('.fsub');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Opening Payment…';
+
+  const options = {
+    key: RZP_KEY,
+    amount: planData.amount,        // in paise
+    currency: 'INR',
+    name: 'Kumbh Snan',
+    description: planData.name,
+    image: 'https://kumbh-snan.com/favicon.png',
+    prefill: {
+      name: name,
+      email: email,
+      contact: phone
+    },
+    notes: {
+      gotra: gotra || 'Not provided',
+      country: country || 'Not provided',
+      package: plan
+    },
+    theme: { color: '#C9A84C' },
+    modal: {
+      ondismiss: function(){
+        submitBtn.disabled = false;
+        submitBtn.textContent = '🕉 Confirm & Proceed to Payment →';
+      }
+    },
+    handler: function(response){
+      // Payment SUCCESS
+      const paymentId = response.razorpay_payment_id;
+      const timestamp = new Date().toISOString();
+      const price = planData.amount / 100;
+
+      // Fire Facebook pixel
+      if(typeof fbq!=='undefined'){
+        fbq('track','Purchase',{value:price,currency:'INR'});
+        fbq('track','Lead');
+      }
+
+      // Submit to Google Sheet
+      submitToSheet({
+        Timestamp:  timestamp,
+        Name:       name,
+        Gotra:      gotra || '',
+        Phone:      phone,
+        Email:      email,
+        Package:    plan,
+        Country:    country || '',
+        Message:    message || '',
+        'Payment ID': paymentId,
+        Status:     'Success',
+        Amount:     price
+      });
+
+      // Show Thank You screen
+      document.getElementById('popupForm').style.display='none';
+      document.getElementById('popupThanks').style.display='block';
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = '🕉 Confirm & Proceed to Payment →';
+    },
+    // Also handle payment failure (log but don't show thank you)
+    'payment.failed': function(response){
+      const timestamp = new Date().toISOString();
+      submitToSheet({
+        Timestamp:  timestamp,
+        Name:       name,
+        Gotra:      gotra || '',
+        Phone:      phone,
+        Email:      email,
+        Package:    plan,
+        Country:    country || '',
+        Message:    message || '',
+        'Payment ID': response.error.metadata ? response.error.metadata.payment_id : '',
+        Status:     'Failed - ' + (response.error.description || 'Unknown'),
+        Amount:     planData.amount / 100
+      });
+      alert('Payment failed: ' + (response.error.description || 'Please try again or contact us on WhatsApp.'));
+      submitBtn.disabled = false;
+      submitBtn.textContent = '🕉 Confirm & Proceed to Payment →';
+    }
+  };
+
+  const rzp = new Razorpay(options);
+  rzp.on('payment.failed', options['payment.failed']);
+  rzp.open();
 }
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closePopup()});
