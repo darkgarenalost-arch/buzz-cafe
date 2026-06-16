@@ -72,7 +72,7 @@ nav{position:sticky;top:36px;z-index:998;background:rgba(8,8,8,.96);backdrop-fil
 .reveal.vis{opacity:1;transform:translateY(0)}
 
 /* HERO */
-.hero{min-height:92vh;display:flex;align-items:center;background:radial-gradient(ellipse at 15% 50%,rgba(201,168,76,.1) 0%,transparent 55%),radial-gradient(ellipse at 85% 20%,rgba(201,168,76,.06) 0%,transparent 50%),linear-gradient(180deg,#0a0500 0%,#080808 60%,#080808 100%);padding:3rem 0 3.5rem;position:relative;overflow:hidden}
+.hero{min-height:92vh;display:flex;align-items:center;background:radial-gradient(ellipse at 15% 50%,rgba(201,168,76,.1) 0%,transparent 55%),radial-gradient(ellipse at 85% 20%,rgba(201,168,76,.06) 0%,transparent 50%),linear-gradient(180deg,rgba(10,5,0,0.82) 0%,rgba(8,8,8,0.78) 60%,rgba(8,8,8,0.92) 100%),url('image1.jpg') center center / cover no-repeat;padding:3rem 0 3.5rem;position:relative;overflow:hidden}
 .hero::before{content:'OM';position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-size:clamp(200px,35vw,380px);color:rgba(201,168,76,.03);font-family:var(--serif);pointer-events:none;line-height:1;font-weight:800}
 .hero-inner{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:center;position:relative;z-index:2}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-size:.78rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:1.2rem}
@@ -295,7 +295,7 @@ footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:2rem 0
           Send us your photo — our trained Vedic pandit performs your Kumbh Snan at the holy Nashik ghats. You receive a <strong>full video on WhatsApp within 24 hours.</strong>
         </p>
         <div class="hero-ctas">
-          <button class="btn-gold" onclick="openPopup('Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501')">
+          <button class="btn-gold" onclick="openPopup()">
             🕉 Book My Snan — ₹201 onwards
           </button>
           <button class="btn-out" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
@@ -696,7 +696,7 @@ function toggleFaq(btn){
 
 // ─── PLAN MAP ─────────────────────────────────────────────────────────────────
 const PLANS={
-  'Divya Snan - Ritual + Video - ₹201':{name:'Divya Snan — Ritual + Video',price:'₹1',amount:100},
+  'Divya Snan - Ritual + Video - ₹201':{name:'Divya Snan — Ritual + Video',price:'₹201',amount:20100},
   'Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501':{name:'Sampoorna Seva — Complete Blessing',price:'₹501',amount:50100},
 };
 
