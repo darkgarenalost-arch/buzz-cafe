@@ -1,854 +1,1157 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- ===== META PIXEL ===== -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','689667723047867');
-fbq('track','PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=689667723047867&ev=PageView&noscript=1"/></noscript>
-<!-- ===== END META PIXEL ===== -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Book Kumbh Snan online for Kumbh Mela Nashik 2027. Real pandit performs your sacred snan at Nashik ghats. Video proof on WhatsApp within 24 hours.">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://kumbh-snan.com/">
-<title>Kumbh Snan | Book Your Digital Snan — Maha Kumbh Nashik 2027</title>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kumbh-snan.com/">
-<meta property="og:title" content="Book Your Kumbh Snan Online | Maha Kumbh Nashik 2027">
-<meta property="og:description" content="Real pandit. Real ghat. Real blessings. Video proof on WhatsApp in 24 hours.">
-<meta property="og:image" content="https://kumbh-snan.com/favicon.png">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --gold:#C9A84C;--gold-b:#F0C448;--gold-dim:rgba(201,168,76,.12);--gold-bdr:rgba(201,168,76,.28);
-  --dk:#080808;--dk2:#0F0F0F;--dk3:#141414;--dk4:#1C1C1C;
-  --wh:#F8F4EC;--gray:#888880;--gl:#AAAAAA;
-  --serif:'Playfair Display',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
-  --r:14px;--glow:0 0 30px rgba(201,168,76,.22);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--dk);color:var(--wh);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-button{cursor:pointer;border:none;background:none;font-family:inherit}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Kumbh Snan Seva | Sacred Online Seva Booking</title>
+    <meta name="description" content="Book Digital Kumbh Snan Seva in your name. Receive the blessings of the holy Kumbh Snan from your home through a dedicated spiritual seva. Simple booking, secure payment, confirmation after seva.">
+    <meta name="keywords" content="Kumbh Snan, Digital Seva, Online Puja, Kumbh Mela, Hindu Seva, Spiritual Service, Ganga Snan">
+    <meta property="og:title" content="Digital Kumbh Snan Seva | Sacred Online Seva Booking">
+    <meta property="og:description" content="Receive the blessings of the holy Kumbh Snan from your home. Book your digital seva today.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1623925557447-5b2b5a5b5b5b?w=1200&h=630&fit=crop">
+    <meta name="theme-color" content="#E8651A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#FFF7F0',
+                            100: '#FFEDDB',
+                            200: '#FFD4AD',
+                            300: '#FFB87A',
+                            400: '#FF9A47',
+                            500: '#FF7B2C',
+                            600: '#E8651A',
+                            700: '#CC4F0F',
+                            800: '#A83C08',
+                            900: '#872D04',
+                        },
+                        gold: {
+                            300: '#F0D78C',
+                            400: '#E8C560',
+                            500: '#D4A843',
+                            600: '#B8860B',
+                            700: '#8B6508',
+                        },
+                        cream: '#FFFBF5',
+                        deep: '#2D1A08',
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'Georgia', 'serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite',
+                        'fadeInUp': 'fadeInUp 0.7s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        glow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(232, 101, 26, 0.3), 0 0 40px rgba(212, 168, 67, 0.2)' },
+                            '50%': { boxShadow: '0 0 35px rgba(232, 101, 26, 0.5), 0 0 60px rgba(212, 168, 67, 0.35)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --saffron: #E8651A;
+            --saffron-light: #FF7B2C;
+            --gold: #B8860B;
+            --gold-light: #D4A843;
+            --deep: #2D1A08;
+            --cream: #FFFBF5;
+        }
 
-/* URGENCY BAR */
-.urg-bar{background:linear-gradient(90deg,#1a0800,#0a0400,#1a0800);border-bottom:1px solid rgba(201,168,76,.25);padding:.5rem 1rem;text-align:center;font-size:.8rem;color:var(--gold);letter-spacing:.3px;position:sticky;top:0;z-index:999}
-.urg-bar strong{color:var(--gold-b)}
+        * {
+            scroll-behavior: smooth;
+        }
 
-/* NAV */
-nav{position:sticky;top:36px;z-index:998;background:rgba(8,8,8,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-bdr);display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.5rem;gap:1rem}
-.nav-brand{display:flex;align-items:center;gap:.6rem;font-family:var(--serif);font-size:1.15rem;color:var(--gold)}
-.nav-brand img{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--gold-bdr);object-fit:cover}
-.nav-book{padding:.6rem 1.4rem;background:linear-gradient(135deg,var(--gold),var(--gold-b));color:var(--dk);font-weight:700;font-size:.85rem;border-radius:50px;letter-spacing:.3px;transition:transform .2s,box-shadow .2s;white-space:nowrap}
-.nav-book:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(201,168,76,.4)}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #FFFDF8;
+            color: #3D2B15;
+            -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+        }
 
-/* COMMON */
-.con{max-width:1100px;margin:0 auto;padding:0 1.25rem}
-.badge{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .9rem;background:var(--gold-dim);border:1px solid var(--gold-bdr);border-radius:50px;font-size:.75rem;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.2rem}
-.sec-title{font-family:var(--serif);font-size:clamp(1.75rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:.75rem}
-.sec-title span{color:var(--gold)}
-.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 2rem;background:linear-gradient(135deg,var(--gold),var(--gold-b));color:var(--dk);font-weight:700;font-size:1rem;border-radius:50px;transition:transform .2s,box-shadow .2s;letter-spacing:.3px;text-align:center}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.45)}
-.btn-out{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.8rem;border:1.5px solid var(--gold-bdr);color:var(--gold);font-weight:600;font-size:.95rem;border-radius:50px;transition:all .2s}
-.btn-out:hover{background:var(--gold-dim);border-color:var(--gold)}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
-.reveal.vis{opacity:1;transform:translateY(0)}
+        .font-heading {
+            font-family: 'Playfair Display', 'Georgia', 'serif';
+        }
 
-/* HERO */
-.hero{min-height:92vh;display:flex;align-items:center;background:radial-gradient(ellipse at 15% 50%,rgba(201,168,76,.1) 0%,transparent 55%),radial-gradient(ellipse at 85% 20%,rgba(201,168,76,.06) 0%,transparent 50%),linear-gradient(180deg,rgba(10,5,0,0.82) 0%,rgba(8,8,8,0.78) 60%,rgba(8,8,8,0.92) 100%),url('image1.jpg') center center / cover no-repeat;padding:3rem 0 3.5rem;position:relative;overflow:hidden}
-.hero::before{content:'OM';position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-size:clamp(200px,35vw,380px);color:rgba(201,168,76,.03);font-family:var(--serif);pointer-events:none;line-height:1;font-weight:800}
-.hero-inner{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:center;position:relative;z-index:2}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-size:.78rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:1.2rem}
-.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:22px;height:1px;background:var(--gold);opacity:.5}
-.hero-h1{font-family:var(--serif);font-size:clamp(2.1rem,5vw,3.6rem);font-weight:800;line-height:1.13;margin-bottom:1.25rem}
-.hero-h1 .gd{color:var(--gold)}.hero-h1 .it{font-style:italic}
-.hero-sub{font-size:1.05rem;color:var(--gl);line-height:1.8;margin-bottom:1.75rem;max-width:520px}
-.hero-sub strong{color:var(--wh)}
-.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:1.5rem}
-.hero-trust-row{display:flex;gap:1.5rem;flex-wrap:wrap}
-.ti{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--gray)}
-.ti .ic{color:var(--gold)}
-.hero-vid-wrap{border-radius:16px;overflow:hidden;border:1px solid var(--gold-bdr);box-shadow:0 12px 48px rgba(0,0,0,.65),0 0 32px rgba(201,168,76,.13);background:var(--dk3);flex-shrink:0}
-.hero-vid-top{height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-b),var(--gold))}
-.hero-vid-label{padding:.6rem 1rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid var(--gold-bdr)}
-.hero-vid-label span{font-size:.76rem;color:var(--gold);font-weight:600;letter-spacing:.5px}
-.hero-vid-frame{position:relative;padding-bottom:177.78%;height:0;overflow:hidden;background:#000}
-.hero-vid-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-.hero-vid-foot{padding:.65rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
-.hero-vid-foot p{font-size:.74rem;color:var(--gl)}
-.btn-sm{padding:.5rem 1.1rem;font-size:.82rem}
+        /* Hero overlay gradient */
+        .hero-overlay {
+            background: linear-gradient(180deg,
+                    rgba(20, 8, 2, 0.65) 0%,
+                    rgba(40, 15, 3, 0.55) 40%,
+                    rgba(60, 22, 5, 0.6) 70%,
+                    rgba(20, 8, 2, 0.75) 100%);
+        }
 
-/* GOD STRIP */
-.god-strip{background:var(--dk2);border-top:1px solid var(--gold-bdr);border-bottom:1px solid var(--gold-bdr);padding:1.75rem 0;overflow:hidden}
-.god-strip-inner{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;align-items:center}
-.god-photo{display:flex;flex-direction:column;align-items:center;gap:.5rem}
-.god-img{width:68px;height:68px;border-radius:50%;border:2px solid var(--gold-bdr);background:linear-gradient(135deg,#1a0f00,var(--dk3));overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 4px 16px rgba(0,0,0,.5),0 0 12px rgba(201,168,76,.15);transition:border-color .2s,box-shadow .2s,transform .2s}
-.god-img:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(201,168,76,.3);transform:scale(1.08)}
-.god-img img{width:100%;height:100%;object-fit:cover}
-.god-name{font-size:.67rem;color:var(--gold);font-weight:600;letter-spacing:.8px;text-transform:uppercase;text-align:center}
+        /* Divine glow effect */
+        .divine-glow {
+            position: relative;
+        }
+        .divine-glow::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(255, 180, 60, 0.25) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+        @keyframes glowPulse {
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.25);
+                opacity: 1;
+            }
+        }
 
-/* HOW IT WORKS */
-.sec{padding:4.5rem 0}
-.hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-.hiw-card{text-align:center;padding:2.25rem 1.5rem;background:var(--dk3);border:1px solid var(--gold-bdr);border-radius:var(--r);position:relative;transition:transform .3s,box-shadow .3s}
-.hiw-card:hover{transform:translateY(-5px);box-shadow:var(--glow)}
-.hiw-num{position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:32px;height:32px;background:linear-gradient(135deg,var(--gold),var(--gold-b));color:var(--dk);font-weight:700;font-size:.85rem;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.hiw-ico{font-size:2.6rem;margin-bottom:.8rem}
-.hiw-card h3{font-family:var(--serif);font-size:1.1rem;margin-bottom:.6rem;color:var(--gold)}
-.hiw-card p{color:var(--gl);font-size:.88rem;line-height:1.7}
+        /* Premium card shadow */
+        .card-premium {
+            box-shadow: 0 4px 24px rgba(184, 134, 11, 0.12), 0 1px 4px rgba(0, 0, 0, 0.06);
+            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+        }
+        .card-premium:hover {
+            box-shadow: 0 12px 36px rgba(184, 134, 11, 0.2), 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        .card-featured {
+            box-shadow: 0 8px 40px rgba(232, 101, 26, 0.22), 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 2px solid #D4A843;
+            position: relative;
+        }
+        .card-featured::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: inherit;
+            padding: 3px;
+            background: linear-gradient(135deg, #D4A843, #E8651A, #D4A843);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+        @keyframes borderGlow {
+            0%,
+            100% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
 
-/* PACKAGES */
-.pkg-sec{background:linear-gradient(180deg,#0d0800,var(--dk));padding:4.5rem 0}
-.pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:760px;margin:2.5rem auto 0}
-.pc{background:var(--dk3);border:1px solid var(--gold-bdr);border-radius:var(--r);padding:2rem 1.6rem;text-align:center;position:relative;transition:transform .3s,box-shadow .3s}
-.pc.pop{border-color:var(--gold);background:linear-gradient(180deg,#1e1000,var(--dk3));box-shadow:var(--glow);transform:scale(1.03)}
-.pc.pop:hover{transform:scale(1.03) translateY(-5px)}
-.pc:not(.pop):hover{transform:translateY(-5px)}
-.pop-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold-b));color:var(--dk);font-size:.7rem;font-weight:700;padding:.25rem 1rem;border-radius:50px;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
-.pc-plan{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.3rem}
-.pc-name{font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:.2rem}
-.pc-desc{color:var(--gray);font-size:.82rem;margin-bottom:1.4rem;line-height:1.5}
-.pc-price{margin-bottom:1.4rem}
-.pc-cur{font-size:1.2rem;color:var(--gold);font-weight:700;vertical-align:top;line-height:2}
-.pc-amt{font-family:var(--serif);font-size:3rem;font-weight:800;color:var(--gold);line-height:1}
-.pc-per{color:var(--gray);font-size:.78rem;margin-top:.3rem}
-.pc-features{text-align:left;margin-bottom:1.6rem}
-.pc-features li{padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--gl)}
-.pc-features li:last-child{border-bottom:none}
-.chk{color:var(--gold);flex-shrink:0;font-weight:700}
-.crs{color:#3a3a3a;flex-shrink:0}
-.crs+span{color:#444}
+        /* Sticky CTA bar */
+        .sticky-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(184, 134, 11, 0.25);
+            padding: 10px 16px;
+            padding-bottom: max(10px, env(safe-area-inset-bottom));
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(100%);
+            transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .sticky-cta-bar.visible {
+            transform: translateY(0);
+        }
 
-/* GUARANTEE */
-.guarantee-band{background:linear-gradient(90deg,rgba(201,168,76,.07),rgba(201,168,76,.14),rgba(201,168,76,.07));border-top:1px solid var(--gold-bdr);border-bottom:1px solid var(--gold-bdr);padding:1.75rem 1.25rem;text-align:center}
-.guarantee-band p{color:var(--gl);font-size:.92rem;line-height:1.7;max-width:620px;margin:0 auto}
-.guarantee-band strong{color:var(--wh)}
+        /* Testimonial carousel */
+        .testimonial-slide {
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+            transition: opacity 0.5s ease;
+        }
+        .testimonial-track {
+            display: flex;
+            scroll-snap-type: x mandatory;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .testimonial-track::-webkit-scrollbar {
+            display: none;
+        }
 
-/* TESTIMONIALS */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
-.tc{background:var(--dk3);border:1px solid var(--gold-bdr);border-radius:var(--r);padding:1.75rem;transition:transform .3s,border-color .3s}
-.tc:hover{transform:translateY(-4px);border-color:var(--gold)}
-.tc-stars{color:var(--gold);font-size:.95rem;margin-bottom:.8rem;letter-spacing:2px}
-.tc-txt{color:var(--gl);font-size:.88rem;line-height:1.75;font-style:italic;margin-bottom:1.25rem}
-.tc-auth{display:flex;align-items:center;gap:.65rem}
-.tc-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-b));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--dk);font-size:.9rem;flex-shrink:0}
-.tc-name{font-weight:600;font-size:.88rem}
-.tc-loc{color:var(--gray);font-size:.75rem;margin-top:.1rem}
+        /* FAQ accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            opacity: 1;
+            padding-top: 12px;
+            padding-bottom: 4px;
+        }
+        .faq-icon {
+            transition: transform 0.35s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
 
-/* FAQ */
-.faq-list{max-width:680px;margin:2.5rem auto 0}
-.faq-item{border:1px solid var(--gold-bdr);border-radius:var(--r);margin-bottom:.75rem;overflow:hidden}
-.faq-q{width:100%;text-align:left;padding:1.1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;background:var(--dk3);color:var(--wh);font-size:.93rem;font-weight:500;transition:background .2s;gap:.75rem}
-.faq-q:hover{background:var(--dk4)}
-.faq-q .arr{color:var(--gold);transition:transform .3s;font-size:1.2rem;font-weight:300;flex-shrink:0}
-.faq-q.open .arr{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;background:var(--dk2);color:var(--gl);font-size:.9rem;line-height:1.75;padding:0 1.4rem}
-.faq-a.open{max-height:260px;padding:1.1rem 1.4rem}
+        /* Lightbox */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: rgba(0, 0, 0, 0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .lightbox-overlay img {
+            max-width: 92vw;
+            max-height: 85vh;
+            border-radius: 12px;
+            object-fit: contain;
+            transform: scale(0.9);
+            transition: transform 0.35s ease;
+        }
+        .lightbox-overlay.active img {
+            transform: scale(1);
+        }
 
-/* POPUP */
-.popup-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:1rem;overflow-y:auto}
-.popup-overlay.open{display:flex}
-.popup-box{background:var(--dk3);border:1px solid var(--gold-bdr);border-radius:20px;width:100%;max-width:520px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.8),0 0 48px rgba(201,168,76,.15);animation:popIn .35s cubic-bezier(.34,1.56,.64,1);margin:auto}
-@keyframes popIn{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
-.popup-topbar{height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-b),var(--gold));border-radius:20px 20px 0 0}
-.popup-header{padding:1.5rem 1.5rem 1rem;border-bottom:1px solid var(--gold-bdr);display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
-.popup-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold);line-height:1.2}
-.popup-sub{color:var(--gray);font-size:.8rem;margin-top:.3rem}
-.popup-close{width:32px;height:32px;border-radius:50%;background:var(--dk4);color:var(--gl);font-size:1.1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,color .2s}
-.popup-close:hover{background:rgba(201,168,76,.15);color:var(--gold)}
-.popup-body{padding:1.5rem}
-.fg{margin-bottom:1.2rem}
-.fl{display:block;font-size:.79rem;font-weight:600;color:var(--gl);margin-bottom:.4rem;letter-spacing:.4px}
-.fl .req{color:var(--gold)}
-.fi,.fs{width:100%;background:var(--dk2);border:1px solid var(--gold-bdr);border-radius:10px;color:var(--wh);padding:.8rem .95rem;font-size:.9rem;font-family:inherit;transition:border-color .2s,box-shadow .2s;outline:none}
-.fi:focus,.fs:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.1)}
-.fs{appearance:none;cursor:pointer}
-.fr2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.fsub{width:100%;padding:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold-b));color:var(--dk);font-weight:700;font-size:1rem;border-radius:50px;transition:transform .2s,box-shadow .2s;letter-spacing:.3px;margin-top:.5rem}
-.fsub:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.4)}
-.fnote{text-align:center;color:var(--gray);font-size:.76rem;margin-top:.75rem;line-height:1.5}
-.plan-preview{background:var(--dk2);border:1px solid var(--gold-bdr);border-radius:10px;padding:.85rem 1.1rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:1.4rem;flex-wrap:wrap;gap:.5rem}
-.plan-preview-name{font-weight:600;font-size:.9rem;color:var(--wh)}
-.plan-preview-price{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--gold)}
+        /* Animations on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-/* FINAL CTA */
-.final-cta{background:linear-gradient(135deg,#1a0f00,#080808,#1a0f00);border-top:1px solid var(--gold-bdr);padding:4rem 0;text-align:center}
+        /* Ripple effect on buttons */
+        .btn-ripple {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-ripple::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .btn-ripple:active::after {
+            opacity: 1;
+        }
 
-/* PAY BADGES */
-.pay-badges{display:flex;gap:.65rem;justify-content:center;flex-wrap:wrap;margin-top:1.25rem}
-.pay-badge{background:var(--dk3);border:1px solid var(--gold-bdr);border-radius:8px;padding:.4rem 1rem;color:var(--gl);font-size:.78rem}
+        /* Custom scrollbar */
+        @media (min-width: 768px) {
+            ::-webkit-scrollbar {
+                width: 6px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #FFFBF5;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #D4A843;
+                border-radius: 3px;
+            }
+        }
 
-/* FOOTER */
-footer{background:var(--dk2);border-top:1px solid var(--gold-bdr);padding:2rem 0 1.25rem}
-.ft-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--dk4)}
-.ft-brand{display:flex;align-items:center;gap:.55rem;font-family:var(--serif);font-size:1.15rem;color:var(--gold)}
-.ft-brand img{width:26px;height:26px;border-radius:50%;border:1px solid var(--gold-bdr);object-fit:cover}
-.ft-links-row{display:flex;gap:1.25rem;flex-wrap:wrap}
-.ft-links-row a{color:var(--gray);font-size:.83rem;transition:color .2s}
-.ft-links-row a:hover{color:var(--gold)}
-.ft-social{display:flex;gap:.55rem}
-.soc{width:32px;height:32px;background:var(--dk4);border:1px solid var(--gold-bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:.78rem;font-weight:600;transition:all .2s}
-.soc:hover{background:var(--gold-dim);border-color:var(--gold);color:var(--gold)}
-.ft-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;padding-top:1.1rem}
-.ft-copy{color:var(--gray);font-size:.78rem}
-
-/* WHATSAPP FLOAT */
-.wa-btn{position:fixed;bottom:1.5rem;right:1.5rem;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.4);z-index:900;cursor:pointer;transition:transform .2s;animation:waBnc 2.2s ease-in-out infinite}
-.wa-btn:hover{transform:scale(1.1);animation:none}
-.wa-btn svg{width:28px;height:28px;fill:#fff}
-@keyframes waBnc{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-
-/* THANK YOU BOX */
-.ty-box{text-align:center;padding:2.5rem 1.75rem}
-.ty-ico{width:76px;height:76px;background:linear-gradient(135deg,var(--gold),var(--gold-b));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.25rem;animation:spop .5s ease}
-@keyframes spop{0%{transform:scale(0);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
-.ty-title{font-family:var(--serif);font-size:1.8rem;font-weight:800;margin-bottom:.65rem}
-.ns-list{background:var(--dk2);border:1px solid var(--gold-bdr);border-radius:var(--r);padding:1.4rem;text-align:left;margin:1.25rem 0}
-.ns{display:flex;gap:.8rem;align-items:flex-start;margin-bottom:.9rem}
-.ns:last-child{margin-bottom:0}
-.ns-num{width:24px;height:24px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-bdr);color:var(--gold);font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
-.ns-txt{font-size:.87rem;color:var(--gl);line-height:1.6}
-.ns-txt strong{color:var(--wh)}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:2rem}
-  .hero-vid-wrap{max-width:300px;margin:0 auto}
-  .hiw-grid{grid-template-columns:1fr}
-  .testi-grid{grid-template-columns:1fr}
-  .pkg-grid{grid-template-columns:1fr;max-width:380px}
-  .pc.pop{transform:none}
-  .pc.pop:hover{transform:translateY(-5px)}
-}
-@media(max-width:600px){
-  .urg-bar{font-size:.73rem}
-  nav{top:32px;padding:.65rem 1rem}
-  .hero{padding:2rem 0 2.5rem;min-height:auto}
-  .hero-h1{font-size:clamp(1.9rem,8vw,2.8rem)}
-  .hero-ctas{flex-direction:column}
-  .hero-ctas .btn-gold,.hero-ctas .btn-out{width:100%;justify-content:center}
-  .hero-trust-row{gap:1rem}
-  .hiw-grid{gap:1rem}
-  .god-strip-inner{gap:1.1rem}
-  .god-img{width:56px;height:56px;font-size:1.75rem}
-  .testi-grid{gap:1rem}
-  .fr2{grid-template-columns:1fr}
-  .popup-box{border-radius:16px}
-  .popup-body{padding:1.2rem}
-  .popup-title{font-size:1.2rem}
-  .ft-inner{flex-direction:column;align-items:flex-start}
-  .ft-bot{flex-direction:column;align-items:center;text-align:center}
-  .testi-extra{grid-template-columns:1fr !important}
-}
-@media(max-width:380px){
-  .god-img{width:48px;height:48px;font-size:1.5rem}
-  .god-name{font-size:.6rem}
-}
-</style>
+        /* Pulse dot for live indicator */
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(34, 197, 94, 0);
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- URGENCY BAR -->
-<div class="urg-bar">
-  🔥 <strong>Only 47 slots remaining</strong> for Maha Kumbh Nashik 2027 — Slots filling fast. <strong>Book yours now.</strong>
+    <!-- ============ META PIXEL BASE CODE ============ -->
+    <script>
+        // Replace with your actual Meta Pixel ID
+        const META_PIXEL_ID = 'YOUR_PIXEL_ID_HERE';
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', META_PIXEL_ID);
+        fbq('track', 'PageView');
+        // Track ViewContent on page load
+        fbq('track', 'ViewContent', {
+            content_name: 'Digital Kumbh Snan Seva',
+            content_category: 'Spiritual Service',
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- ============ STICKY MOBILE CTA BAR ============ -->
+    <div class="sticky-cta-bar lg:hidden" id="stickyCtaBar">
+        <button onclick="openCheckout(201, 'Digital Kumbh Snan Seva')"
+    class="btn-ripple flex-1 bg-white border-2 border-saffron-500 text-saffron-600 font-semibold py-3 px-3 rounded-xl text-sm transition-all hover:bg-saffron-50 active:scale-95 shadow-md">
+    ₹201 Seva
+</button>
+<button onclick="openCheckout(501, 'Premium Digital Kumbh Snan Seva')"
+class="btn-ripple flex-1 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white font-semibold py-3 px-3 rounded-xl text-sm transition-all hover:from-saffron-600 hover:to-saffron-700 active:scale-95 shadow-lg animate-glow relative overflow-hidden">
+<span class="relative z-10">₹501 Premium</span>
+</button>
 </div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-brand">
-    <img src="om.png" alt="Kumbh Snan">
-    Kumbh Snan
-  </div>
-  <button class="nav-book" onclick="openPopup()">🕉 Book Snan Now</button>
-</nav>
+<!-- ============ SECTION 1: HERO ============ -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img
+        src="https://images.unsplash.com/photo-1609949279531-cf48d64bed89?w=1200&h=900&fit=crop&crop=center"
+        alt="Sacred Kumbh Snan at Ganga river"
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+        fetchpriority="high"
+        >
+        <div class="absolute inset-0 hero-overlay"></div>
+        <!-- Divine light rays -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-gradient-to-b from-amber-300/15 via-transparent to-transparent blur-3xl pointer-events-none"></div>
+    </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="con">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-eyebrow">Maha Kumbh Nashik 2027</div>
-        <h1 class="hero-h1">
-          Can't Attend<br>
-          <span class="gd it">Kumbh Mela?</span><br>
-          We Perform Your<br>
-          <span class="gd">Sacred Snan.</span>
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto px-5 pt-20 pb-32 text-center max-w-4xl">
+        <!-- Sacred symbol -->
+        <div class="mb-6 animate-float">
+            <span class="inline-block text-5xl md:text-6xl opacity-80">🕉️</span>
+        </div>
+
+        <!-- Trust badge -->
+        <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-5 py-2 mb-6 border border-white/25">
+            <span class="pulse-dot"></span>
+            <span class="text-white/90 text-sm font-medium">Trusted by thousands of devotees</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5 divine-glow">
+            <span class="relative z-10">Digital Kumbh<br class="sm:hidden"> Snan Seva</span>
+            <br>
+            <span class="text-gold-300 relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">In Your Name</span>
         </h1>
-        <p class="hero-sub">
-          Send us your photo — our trained Vedic pandit performs your Kumbh Snan at the holy Nashik ghats. You receive a <strong>full video on WhatsApp within 24 hours.</strong>
+
+        <!-- Subheadline -->
+        <p class="text-white/85 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+            Receive the sacred blessings of the holy Kumbh Snan from your home through a dedicated spiritual seva performed on your behalf with proper sankalp.
         </p>
-        <div class="hero-ctas">
-          <button class="btn-gold" onclick="openPopup()">
-            🕉 Book My Snan — ₹201 onwards
-          </button>
-          <button class="btn-out" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
-            See Packages ↓
-          </button>
-        </div>
-        <div class="hero-trust-row">
-          <div class="ti"><span class="ic">✅</span> Real Ritual, Real Ghat</div>
-          <div class="ti"><span class="ic">🎥</span> Video Proof on WhatsApp</div>
-          <div class="ti"><span class="ic">🌍</span> 30+ Countries</div>
-          <div class="ti"><span class="ic">⭐</span> 500+ Snans Done</div>
-        </div>
-      </div>
 
-      <!-- YouTube Shorts -->
-      <div class="hero-vid-wrap">
-        <div class="hero-vid-top"></div>
-        <div class="hero-vid-label"><span>🎬 See How It Works</span></div>
-        <div class="hero-vid-frame">
-          <iframe
-            src="https://www.youtube.com/embed/ruaZzA49uXM?rel=0&modestbranding=1&playsinline=1"
-            title="Kumbh Snan Booking Guide"
-            frameborder="0"
-            allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
-            allowfullscreen loading="lazy"
-          ></iframe>
+        <!-- Trust line -->
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10 text-white/75 text-sm">
+            <span class="flex items-center gap-1.5">🔒 Simple Booking</span>
+            <span class="flex items-center gap-1.5">💳 Secure Payment</span>
+            <span class="flex items-center gap-1.5">✅ Confirmation After Seva</span>
         </div>
-        <div class="hero-vid-foot">
-          <p>🕉 Book in under 2 minutes</p>
-          <button class="btn-gold btn-sm" onclick="openPopup()">Book Now</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- DEITY STRIP -->
-<div class="god-strip">
-  <div class="con">
-    <div class="god-strip-inner">
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Shiva_Mahayogi.jpg/200px-Shiva_Mahayogi.jpg" alt="Lord Shiva" onerror="this.parentNode.innerHTML='🙏'">
-        </div>
-        <div class="god-name">Lord Shiva</div>
-      </div>
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Ganga_Avatar.jpg/200px-Ganga_Avatar.jpg" alt="Maa Ganga" onerror="this.parentNode.innerHTML='🪷'">
-        </div>
-        <div class="god-name">Maa Ganga</div>
-      </div>
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Vishnu_Pita_Vastra.jpg/200px-Vishnu_Pita_Vastra.jpg" alt="Lord Vishnu" onerror="this.parentNode.innerHTML='🌺'">
-        </div>
-        <div class="god-name">Lord Vishnu</div>
-      </div>
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Maa_durga_by_vishnu108.jpg/200px-Maa_durga_by_vishnu108.jpg" alt="Maa Durga" onerror="this.parentNode.innerHTML='🔱'">
-        </div>
-        <div class="god-name">Maa Durga</div>
-      </div>
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg/200px-Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg" alt="Ganesha" onerror="this.parentNode.innerHTML='🐘'">
-        </div>
-        <div class="god-name">Ganesha</div>
-      </div>
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Rama_British_Museum.jpg/200px-Rama_British_Museum.jpg" alt="Lord Ram" onerror="this.parentNode.innerHTML='🏹'">
-        </div>
-        <div class="god-name">Lord Ram</div>
-      </div>
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Goddess_Lakshmi.jpg/200px-Goddess_Lakshmi.jpg" alt="Maa Lakshmi" onerror="this.parentNode.innerHTML='🌸'">
-        </div>
-        <div class="god-name">Maa Lakshmi</div>
-      </div>
-      <div class="god-photo">
-        <div class="god-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Hanuman_Vigraham.jpg/200px-Hanuman_Vigraham.jpg" alt="Hanuman Ji" onerror="this.parentNode.innerHTML='🌟'">
-        </div>
-        <div class="god-name">Hanuman Ji</div>
-      </div>
-    </div>
-  </div>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button onclick="openCheckout(201, 'Digital Kumbh Snan Seva')"
+            class="btn-ripple w-full sm:w-auto bg-white text-saffron-700 font-bold text-lg px-10 py-4 rounded-2xl shadow-2xl hover:shadow-3xl transition-all hover:bg-amber-50 active:scale-95 border-2 border-transparent hover:border-gold-400">
+            Book ₹201 Seva
+        </button>
+        <button onclick="openCheckout(501, 'Premium Digital Kumbh Snan Seva')"
+        class="btn-ripple w-full sm:w-auto bg-gradient-to-r from-saffron-500 via-saffron-600 to-saffron-700 text-white font-bold text-lg px-10 py-4 rounded-2xl shadow-2xl transition-all hover:from-saffron-600 hover:to-saffron-800 active:scale-95 border-2 border-gold-400/50 animate-glow">
+        Book ₹501 Premium Seva ✨
+    </button>
 </div>
 
-<!-- HOW IT WORKS -->
-<section class="sec">
-  <div class="con">
-    <div style="text-align:center" class="reveal">
-      <div class="badge" style="margin:0 auto 1rem">3 Simple Steps</div>
-      <h2 class="sec-title">How <span>Digital Snan</span> Works</h2>
-      <p style="color:var(--gl);max-width:520px;margin:.5rem auto 0;font-size:.97rem">Get your Kumbh blessings from USA, UK, Canada, Australia — anywhere in the world.</p>
-    </div>
-    <div class="hiw-grid">
-      <div class="hiw-card reveal">
-        <div class="hiw-num">1</div>
-        <div class="hiw-ico">📱</div>
-        <h3>Book in 2 Minutes</h3>
-        <p>Click "Book My Snan", choose your package, fill your name and WhatsApp number. Done. Easy as ordering food online.</p>
-      </div>
-      <div class="hiw-card reveal">
-        <div class="hiw-num">2</div>
-        <div class="hiw-ico">🙏</div>
-        <h3>Pandit Does the Ritual</h3>
-        <p>Our trained Vedic pandit goes to the holy Nashik Kumbh ghat, holds your photo, and performs the full sacred Snan chanting your name and gotra.</p>
-      </div>
-      <div class="hiw-card reveal">
-        <div class="hiw-num">3</div>
-        <div class="hiw-ico">🎥</div>
-        <h3>Video on WhatsApp</h3>
-        <p>You receive the full ritual video on your WhatsApp within 24 hours. Watch your Snan happen at the ghat — real proof of your blessings.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PACKAGES -->
-<section class="pkg-sec" id="packages">
-  <div class="con">
-    <div style="text-align:center" class="reveal">
-      <div class="badge" style="margin:0 auto 1rem">Choose Your Package</div>
-      <h2 class="sec-title">Simple, Clear <span>Pricing</span></h2>
-      <p style="color:var(--gl);max-width:480px;margin:.5rem auto 0;font-size:.92rem">Every package includes a real ritual at the holy ghat + video proof on WhatsApp.</p>
-    </div>
-    <div class="pkg-grid">
-      <div class="pc reveal">
-        <div class="pc-plan">Divya Snan</div>
-        <div class="pc-name">Ritual + Video</div>
-        <div class="pc-desc">Sacred snan with full video proof on WhatsApp</div>
-        <div class="pc-price">
-          <span class="pc-cur">₹</span><span class="pc-amt">201</span>
-          <div class="pc-per">one-time blessing</div>
-        </div>
-        <ul class="pc-features">
-          <li><span class="chk">✓</span><span>Sacred Kumbh Snan at Holy Ghat</span></li>
-          <li><span class="chk">✓</span><span>Name &amp; Gotra chanting</span></li>
-          <li><span class="chk">✓</span><span>Ritual Video on WhatsApp</span></li>
-          <li><span class="chk">✓</span><span>Booking confirmation</span></li>
-          <li><span class="crs">✗</span><span>Ganga Jal (Holy Water)</span></li>
-          <li><span class="crs">✗</span><span>Prasad home delivery</span></li>
-        </ul>
-        <button class="btn-out" style="width:100%" onclick="openPopup('Divya Snan - Ritual + Video - ₹201')">Book Divya Snan →</button>
-      </div>
-
-      <div class="pc pop reveal">
-        <div class="pop-badge">🌟 Most Popular</div>
-        <div class="pc-plan">Sampoorna Seva</div>
-        <div class="pc-name">Ritual + Video + Prasad</div>
-        <div class="pc-desc">Complete blessing with Ganga Jal &amp; Prasad sent to your home</div>
-        <div class="pc-price">
-          <span class="pc-cur">₹</span><span class="pc-amt">501</span>
-          <div class="pc-per">complete divine experience</div>
-        </div>
-        <ul class="pc-features">
-          <li><span class="chk">✓</span><span>Sacred Kumbh Snan at Holy Ghat</span></li>
-          <li><span class="chk">✓</span><span>Name &amp; Gotra chanting</span></li>
-          <li><span class="chk">✓</span><span>Ritual Video on WhatsApp</span></li>
-          <li><span class="chk">✓</span><span>Holy Ganga Jal (Sacred Water)</span></li>
-          <li><span class="chk">✓</span><span>Prasad delivered to your home</span></li>
-          <li><span class="chk">✓</span><span>Priority booking confirmation</span></li>
-        </ul>
-        <button class="btn-gold" style="width:100%" onclick="openPopup('Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501')">🕉 Book Sampoorna Seva →</button>
-      </div>
-    </div>
-
-    <div class="pay-badges reveal">
-      <div class="pay-badge">💳 Credit / Debit Card</div>
-      <div class="pay-badge">📱 UPI / GPay / PhonePe</div>
-      <div class="pay-badge">🏦 Net Banking</div>
-      <div class="pay-badge">🌍 International Cards</div>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<div class="guarantee-band">
-  <p>🛡️ <strong>100% Authentic Guarantee</strong> — If we cannot perform your ritual during the official Kumbh dates for any reason, you receive a <strong>full refund. No questions asked.</strong></p>
+<!-- Scroll indicator -->
+<div class="mt-16 animate-bounce">
+    <svg class="w-8 h-8 mx-auto text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+</div>
 </div>
 
-<!-- TESTIMONIALS -->
-<section class="sec">
-  <div class="con">
-    <div style="text-align:center" class="reveal">
-      <div class="badge" style="margin:0 auto 1rem">Real Devotees, Real Stories</div>
-      <h2 class="sec-title">What Our <span>Devotees Say</span></h2>
-    </div>
-    <div class="testi-grid">
-      <div class="tc reveal">
-        <div class="tc-stars">★★★★★</div>
-        <p class="tc-txt">"I'm in the UK and couldn't travel. Kumbh Snan sent a beautiful video within hours — I could see my name being chanted at the ghat. I cried with gratitude. Truly a divine service."</p>
-        <div class="tc-auth"><div class="tc-av">R</div><div><div class="tc-name">Rashmi Kulkarni</div><div class="tc-loc">🇬🇧 London, UK</div></div></div>
-      </div>
-      <div class="tc reveal">
-        <div class="tc-stars">★★★★★</div>
-        <p class="tc-txt">"My elderly mother always wanted to attend Kumbh but couldn't. We booked the family package and the video made her cry with joy. Best ₹500 I ever spent. Absolutely worth it."</p>
-        <div class="tc-auth"><div class="tc-av">V</div><div><div class="tc-name">Vivek Sharma</div><div class="tc-loc">🇺🇸 New Jersey, USA</div></div></div>
-      </div>
-      <div class="tc reveal">
-        <div class="tc-stars">★★★★★</div>
-        <p class="tc-txt">"Very professional. Full puja with our family photos at the Nashik ghat. The Ganga Jal arrived at my home in Melbourne! Will definitely book again next Kumbh."</p>
-        <div class="tc-auth"><div class="tc-av">P</div><div><div class="tc-name">Priya Deshpande</div><div class="tc-loc">🇦🇺 Melbourne, Australia</div></div></div>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:1.25rem;max-width:700px;margin-left:auto;margin-right:auto" class="reveal testi-extra">
-      <div class="tc">
-        <div class="tc-stars">★★★★★</div>
-        <p class="tc-txt">"Booked for my parents. They were so happy seeing the video. Very easy booking process — done in 5 minutes on WhatsApp!"</p>
-        <div class="tc-auth"><div class="tc-av">A</div><div><div class="tc-name">Amit Joshi</div><div class="tc-loc">🇨🇦 Toronto, Canada</div></div></div>
-      </div>
-      <div class="tc">
-        <div class="tc-stars">★★★★★</div>
-        <p class="tc-txt">"I was doubtful at first — but the video was stunning. Full Vedic ritual at the actual Nashik ghat. 100% legit and authentic. Highly recommend to every Hindu NRI."</p>
-        <div class="tc-auth"><div class="tc-av">S</div><div><div class="tc-name">Sunita Agarwal</div><div class="tc-loc">🇦🇪 Dubai, UAE</div></div></div>
-      </div>
-    </div>
-  </div>
+<!-- Floating particles (decorative) -->
+<div class="absolute top-1/4 left-10 w-3 h-3 bg-gold-300/30 rounded-full blur-sm animate-float hidden md:block" style="animation-delay: 0s;"></div>
+<div class="absolute top-1/3 right-16 w-4 h-4 bg-saffron-300/25 rounded-full blur-sm animate-float hidden md:block" style="animation-delay: 1.5s;"></div>
+<div class="absolute bottom-1/4 left-1/4 w-2 h-2 bg-amber-200/30 rounded-full blur-sm animate-float hidden md:block" style="animation-delay: 3s;"></div>
 </section>
 
-<!-- FAQ -->
-<section class="sec" style="background:var(--dk2);border-top:1px solid var(--gold-bdr);padding-top:4rem;padding-bottom:4rem">
-  <div class="con">
-    <div style="text-align:center" class="reveal">
-      <div class="badge" style="margin:0 auto 1rem">Have Questions?</div>
-      <h2 class="sec-title">Frequently Asked <span>Questions</span></h2>
+<!-- ============ SECTION 2: HOW IT WORKS ============ -->
+<section class="py-16 md:py-24 bg-white" id="how-it-works">
+    <div class="container mx-auto px-5 max-w-5xl">
+        <div class="text-center mb-14 reveal">
+            <span class="text-saffron-500 font-semibold text-sm tracking-widest uppercase">Simple Process</span>
+            <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-deep mt-3">How It Works</h2>
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Four simple steps to receive the divine blessings of Kumbh Snan</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <!-- Step 1 -->
+            <div class="reveal text-center group" style="transition-delay: 0.1s;">
+                <div class="w-20 h-20 mx-auto bg-saffron-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-saffron-100 transition-all shadow-lg shadow-saffron-100/50">
+                    <span class="text-4xl">📋</span>
+                </div>
+                <div class="bg-saffron-500 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-bold">1</div>
+                <h3 class="font-heading text-xl font-bold text-deep mb-2">Choose Package</h3>
+                <p class="text-gray-500 text-sm">Select the seva package that resonates with your spiritual needs</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="reveal text-center group" style="transition-delay: 0.2s;">
+                <div class="w-20 h-20 mx-auto bg-saffron-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-saffron-100 transition-all shadow-lg shadow-saffron-100/50">
+                    <span class="text-4xl">💳</span>
+                </div>
+                <div class="bg-saffron-500 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-bold">2</div>
+                <h3 class="font-heading text-xl font-bold text-deep mb-2">Secure Payment</h3>
+                <p class="text-gray-500 text-sm">Complete your booking with our safe and encrypted payment gateway</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="reveal text-center group" style="transition-delay: 0.3s;">
+                <div class="w-20 h-20 mx-auto bg-saffron-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-saffron-100 transition-all shadow-lg shadow-saffron-100/50">
+                    <span class="text-4xl">🙏</span>
+                </div>
+                <div class="bg-saffron-500 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-bold">3</div>
+                <h3 class="font-heading text-xl font-bold text-deep mb-2">Seva With Sankalp</h3>
+                <p class="text-gray-500 text-sm">Dedicated priests perform the snan seva with your name and gotra</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="reveal text-center group" style="transition-delay: 0.4s;">
+                <div class="w-20 h-20 mx-auto bg-saffron-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-saffron-100 transition-all shadow-lg shadow-saffron-100/50">
+                    <span class="text-4xl">✅</span>
+                </div>
+                <div class="bg-saffron-500 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-bold">4</div>
+                <h3 class="font-heading text-xl font-bold text-deep mb-2">Get Confirmation</h3>
+                <p class="text-gray-500 text-sm">Receive confirmation of your completed seva via email or message</p>
+            </div>
+        </div>
     </div>
-    <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q" onclick="toggleFaq(this)">Is this service religiously real and authentic?<span class="arr">+</span></button>
-        <div class="faq-a">Yes, 100%. Our trained Vedic pandits perform the actual sacred Snan at the holy Nashik ghats on the official Kumbh Mela dates. They hold your photo and chant your name and gotra throughout — fully authentic as per Hindu Vedic tradition.</div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q" onclick="toggleFaq(this)">How will I receive my video proof?<span class="arr">+</span></button>
-        <div class="faq-a">The full ritual video is sent directly to your WhatsApp number within 24 hours after the ritual is performed. You can see your name being chanted and the snan happening at the actual Nashik ghat.</div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q" onclick="toggleFaq(this)">What photo do I need to send?<span class="arr">+</span></button>
-        <div class="faq-a">Any clear, recent photo works perfectly. The pandit holds your photo during the entire ritual. For families, send group or individual photos. You send the photo to our WhatsApp after your booking is confirmed — we'll guide you.</div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q" onclick="toggleFaq(this)">Can I book for my whole family or ancestors?<span class="arr">+</span></button>
-        <div class="faq-a">Yes! The Sampoorna Seva package covers your whole family. Many devotees also include Pitru Tarpan (ancestor offering) — just mention it in your booking message. Contact us on WhatsApp for group pricing for 5+ members.</div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q" onclick="toggleFaq(this)">Is my payment secure? What payment methods are accepted?<span class="arr">+</span></button>
-        <div class="faq-a">All payments go through Razorpay — India's most trusted payment gateway with full bank-level encryption. We accept UPI (GPay, PhonePe, Paytm), credit/debit cards, net banking, and all international cards.</div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- FINAL CTA -->
-<div class="final-cta">
-  <div class="con reveal">
-    <div style="font-size:3rem;margin-bottom:1rem">🕉</div>
-    <h2 class="sec-title" style="margin-bottom:.75rem">Ready to Receive <span>Divine Blessings?</span></h2>
-    <p style="color:var(--gl);max-width:480px;margin:0 auto 2rem;font-size:.97rem">Join 500+ devotees across 30 countries who received the sacred Kumbh Snan blessing from anywhere in the world.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <button class="btn-gold" onclick="openPopup('Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501')">🕉 Book My Sacred Snan Now</button>
-      <a href="https://wa.me/918275872736?text=Namaste!%20I%20want%20to%20book%20Kumbh%20Snan" target="_blank" class="btn-out">💬 Ask on WhatsApp</a>
+<!-- ============ SECTION 3: WHY BOOK THIS SEVA ============ -->
+<section class="py-16 md:py-24 bg-cream" id="benefits">
+    <div class="container mx-auto px-5 max-w-5xl">
+        <div class="text-center mb-14 reveal">
+            <span class="text-saffron-500 font-semibold text-sm tracking-widest uppercase">Blessings & Benefits</span>
+            <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-deep mt-3">Why Book This Seva</h2>
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Experience the divine grace of Kumbh Snan without traveling</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
+            <div class="reveal card-premium bg-white rounded-2xl p-6 md:p-7 flex items-start gap-4" style="transition-delay: 0.05s;">
+                <div class="text-3xl flex-shrink-0 mt-1">🏠</div>
+                <div>
+                    <h3 class="font-heading text-lg font-bold text-deep mb-1">Participate from Home</h3>
+                    <p class="text-gray-500 text-sm">No need to travel. Receive blessings remotely through our dedicated seva service.</p>
+                </div>
+            </div>
+            <div class="reveal card-premium bg-white rounded-2xl p-6 md:p-7 flex items-start gap-4" style="transition-delay: 0.1s;">
+                <div class="text-3xl flex-shrink-0 mt-1">🕊️</div>
+                <div>
+                    <h3 class="font-heading text-lg font-bold text-deep mb-1">Spiritual Blessings</h3>
+                    <p class="text-gray-500 text-sm">Attract divine blessings, positive energy, and spiritual purification through the sacred ritual.</p>
+                </div>
+            </div>
+            <div class="reveal card-premium bg-white rounded-2xl p-6 md:p-7 flex items-start gap-4" style="transition-delay: 0.15s;">
+                <div class="text-3xl flex-shrink-0 mt-1">📿</div>
+                <div>
+                    <h3 class="font-heading text-lg font-bold text-deep mb-1">Performed With Devotion</h3>
+                    <p class="text-gray-500 text-sm">Experienced priests perform the seva with proper mantras, rituals, and complete devotion.</p>
+                </div>
+            </div>
+            <div class="reveal card-premium bg-white rounded-2xl p-6 md:p-7 flex items-start gap-4" style="transition-delay: 0.2s;">
+                <div class="text-3xl flex-shrink-0 mt-1">📱</div>
+                <div>
+                    <h3 class="font-heading text-lg font-bold text-deep mb-1">Convenient Online Booking</h3>
+                    <p class="text-gray-500 text-sm">Book anytime from anywhere. Simple, fast, and hassle-free digital experience.</p>
+                </div>
+            </div>
+            <div class="reveal card-premium bg-white rounded-2xl p-6 md:p-7 flex items-start gap-4" style="transition-delay: 0.25s;">
+                <div class="text-3xl flex-shrink-0 mt-1">👨‍👩‍👧‍👦</div>
+                <div>
+                    <h3 class="font-heading text-lg font-bold text-deep mb-1">Suitable For Family Members</h3>
+                    <p class="text-gray-500 text-sm">Book seva for yourself, your spouse, children, parents, or any loved one.</p>
+                </div>
+            </div>
+            <div class="reveal card-premium bg-white rounded-2xl p-6 md:p-7 flex items-start gap-4" style="transition-delay: 0.3s;">
+                <div class="text-3xl flex-shrink-0 mt-1">🛡️</div>
+                <div>
+                    <h3 class="font-heading text-lg font-bold text-deep mb-1">Secure Process</h3>
+                    <p class="text-gray-500 text-sm">Your personal details and payment information are fully protected with encryption.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</section>
+
+<!-- ============ SECTION 4: PACKAGE COMPARISON ============ -->
+<section class="py-16 md:py-24 bg-white" id="packages">
+    <div class="container mx-auto px-5 max-w-4xl">
+        <div class="text-center mb-14 reveal">
+            <span class="text-saffron-500 font-semibold text-sm tracking-widest uppercase">Choose Your Seva</span>
+            <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-deep mt-3">Select Your Package</h2>
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Both packages include dedicated seva with proper sankalp and confirmation</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-stretch">
+            <!-- Package 1 -->
+            <div class="reveal card-premium bg-white rounded-3xl p-8 md:p-10 flex flex-col border border-gray-100" style="transition-delay: 0.1s;">
+                <div class="text-center mb-6">
+                    <h3 class="font-heading text-2xl md:text-3xl font-bold text-deep">Digital Kumbh<br>Snan Seva</h3>
+                    <div class="mt-5">
+                        <span class="text-5xl md:text-6xl font-bold text-deep">₹201</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-2">Standard Seva Package</p>
+                </div>
+                <div class="flex-1 space-y-4 mb-8">
+                    <div class="flex items-center gap-3">
+                        <span class="text-green-500 text-lg">✓</span>
+                        <span class="text-gray-700">Sankalp with your name</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-green-500 text-lg">✓</span>
+                        <span class="text-gray-700">Snan Seva at holy site</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-green-500 text-lg">✓</span>
+                        <span class="text-gray-700">Confirmation after seva</span>
+                    </div>
+                </div>
+                <button onclick="openCheckout(201, 'Digital Kumbh Snan Seva')"
+                class="btn-ripple w-full bg-white border-2 border-saffron-500 text-saffron-600 font-bold py-4 rounded-2xl text-lg transition-all hover:bg-saffron-50 active:scale-95">
+                Book Now
+            </button>
+        </div>
+
+        <!-- Package 2 - Featured -->
+        <div class="reveal card-featured bg-white rounded-3xl p-8 md:p-10 flex flex-col relative overflow-visible" style="transition-delay: 0.2s;">
+            <!-- Most Popular Badge -->
+            <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-400 to-gold-600 text-white font-bold text-sm px-6 py-2 rounded-full shadow-xl z-10 whitespace-nowrap">
+                ⭐ Most Popular
+            </div>
+            <div class="text-center mb-6 mt-2">
+                <h3 class="font-heading text-2xl md:text-3xl font-bold text-deep">Premium Digital<br>Kumbh Snan Seva</h3>
+                <div class="mt-5">
+                    <span class="text-5xl md:text-6xl font-bold text-saffron-600">₹501</span>
+                </div>
+                <p class="text-saffron-500 text-sm mt-2 font-medium">Premium Seva Package</p>
+            </div>
+            <div class="flex-1 space-y-4 mb-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-green-500 text-lg">✓</span>
+                    <span class="text-gray-700 font-medium">Sankalp with your name & gotra</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-green-500 text-lg">✓</span>
+                    <span class="text-gray-700 font-medium">Snan Seva at holy site</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-gold-500 text-lg">✦</span>
+                    <span class="text-gray-800 font-semibold">Priority Processing</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-gold-500 text-lg">✦</span>
+                    <span class="text-gray-800 font-semibold">Premium Confirmation with details</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-gold-500 text-lg">✦</span>
+                    <span class="text-gray-800 font-semibold">Special prayer inclusion</span>
+                </div>
+            </div>
+            <button onclick="openCheckout(501, 'Premium Digital Kumbh Snan Seva')"
+            class="btn-ripple w-full bg-gradient-to-r from-saffron-500 via-saffron-600 to-saffron-700 text-white font-bold py-4 rounded-2xl text-lg transition-all hover:from-saffron-600 hover:to-saffron-800 active:scale-95 shadow-xl animate-glow">
+            Book Premium ✨
+        </button>
+    </div>
 </div>
+</div>
+</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="con">
-    <div class="ft-inner">
-      <div class="ft-brand"><img src="om.png" alt="Kumbh Snan"> Kumbh Snan</div>
-      <div class="ft-links-row">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
-        <a href="mailto:info.kumbhsnan@gmail.com">info.kumbhsnan@gmail.com</a>
-        <a href="https://wa.me/918275872736" target="_blank">+91 82758 72736</a>
-      </div>
-      <div class="ft-social">
-        <a href="https://www.facebook.com/profile.php?id=61589549432209" class="soc" target="_blank">f</a>
-        <a href="https://www.instagram.com/kumbh_snan_official/" class="soc" target="_blank">ig</a>
-        <a href="https://www.youtube.com/channel/UCczCLg5sluFEDaEY0t21C6w" class="soc" target="_blank">yt</a>
-      </div>
+<!-- ============ SECTION 5: PHOTO GALLERY ============ -->
+<section class="py-16 md:py-24 bg-cream" id="gallery">
+    <div class="container mx-auto px-5 max-w-6xl">
+        <div class="text-center mb-14 reveal">
+            <span class="text-saffron-500 font-semibold text-sm tracking-widest uppercase">Sacred Moments</span>
+            <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-deep mt-3">Gallery</h2>
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Glimpses of the sacred Kumbh Snan and holy rituals</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all" onclick="openLightbox(this)" style="transition-delay: 0.05s;">
+                <img src="https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?w=600&h=450&fit=crop"
+                alt="Devotees taking holy dip at Kumbh"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all" onclick="openLightbox(this)" style="transition-delay: 0.1s;">
+                <img src="https://images.unsplash.com/photo-1518288774675-2b3e2b3b2b3b?w=600&h=450&fit=crop"
+                alt="Sacred Ganga river at sunrise"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all" onclick="openLightbox(this)" style="transition-delay: 0.15s;">
+                <img src="https://images.unsplash.com/photo-1623925557447-5b2b5a5b5b5b?w=600&h=450&fit=crop"
+                alt="Priests performing rituals"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all" onclick="openLightbox(this)" style="transition-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1518288774675-2b3e2b3b2b3b?w=600&h=450&fit=crop"
+                alt="Hindu temple at Kumbh"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all" onclick="openLightbox(this)" style="transition-delay: 0.15s;">
+                <img src="https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?w=600&h=450&fit=crop"
+                alt="Devotees in prayer"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all" onclick="openLightbox(this)" style="transition-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1623925557447-5b2b5a5b5b5b?w=600&h=450&fit=crop"
+                alt="Sacred lamp ritual"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all hidden md:block" onclick="openLightbox(this)" style="transition-delay: 0.25s;">
+                <img src="https://images.unsplash.com/photo-1518288774675-2b3e2b3b2b3b?w=600&h=450&fit=crop"
+                alt="Holy Ganga aarti"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+            <div class="reveal gallery-img cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-md hover:shadow-xl transition-all hidden md:block" onclick="openLightbox(this)" style="transition-delay: 0.3s;">
+                <img src="https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?w=600&h=450&fit=crop"
+                alt="Kumbh Mela gathering"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy">
+            </div>
+        </div>
     </div>
-    <div class="ft-bot">
-      <div class="ft-copy">© 2025 Kumbh Snan. All rights reserved. Nashik, Maharashtra, India.</div>
-      <div class="ft-copy">🔒 Secured by Razorpay &nbsp;|&nbsp; 🙏 Authentic Vedic Rituals</div>
+</section>
+
+<!-- ============ SECTION 6: TESTIMONIALS ============ -->
+<section class="py-16 md:py-24 bg-white" id="testimonials">
+    <div class="container mx-auto px-5 max-w-4xl">
+        <div class="text-center mb-14 reveal">
+            <span class="text-saffron-500 font-semibold text-sm tracking-widest uppercase">Devotee Experiences</span>
+            <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-deep mt-3">What Devotees Say</h2>
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Real experiences from devotees who booked our seva</p>
+        </div>
+
+        <div class="relative reveal">
+            <div class="testimonial-track" id="testimonialTrack">
+                <!-- Testimonials will be injected by JS -->
+            </div>
+            <!-- Dots navigation -->
+            <div class="flex justify-center gap-2 mt-8" id="testimonialDots"></div>
+            <!-- Arrows -->
+            <button onclick="moveTestimonial(-1)" class="absolute top-1/2 -translate-y-1/2 -left-3 md:-left-6 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-saffron-500 hover:bg-saffron-50 transition-all z-10 text-xl font-bold" aria-label="Previous testimonial">‹</button>
+            <button onclick="moveTestimonial(1)" class="absolute top-1/2 -translate-y-1/2 -right-3 md:-right-6 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-saffron-500 hover:bg-saffron-50 transition-all z-10 text-xl font-bold" aria-label="Next testimonial">›</button>
+        </div>
     </div>
-  </div>
+</section>
+
+<!-- ============ SECTION 7: TRUST SECTION ============ -->
+<section class="py-16 md:py-20 bg-gradient-to-b from-cream to-white" id="trust">
+    <div class="container mx-auto px-5 max-w-5xl text-center">
+        <div class="reveal mb-12">
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-deep">Your Trust, Our Commitment</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
+            <div class="flex flex-col items-center gap-3 p-5">
+                <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-3xl">🔒</div>
+                <span class="font-semibold text-deep">Secure Payment</span>
+                <span class="text-xs text-gray-500">256-bit encrypted</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 p-5">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-3xl">📞</div>
+                <span class="font-semibold text-deep">Dedicated Support</span>
+                <span class="text-xs text-gray-500">Always available</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 p-5">
+                <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center text-3xl">⚡</div>
+                <span class="font-semibold text-deep">Fast Confirmation</span>
+                <span class="text-xs text-gray-500">Within 24 hours</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 p-5">
+                <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center text-3xl">🕉️</div>
+                <span class="font-semibold text-deep">Trusted Service</span>
+                <span class="text-xs text-gray-500">Spiritual legacy</span>
+            </div>
+        </div>
+        <!-- Trust badges -->
+        <div class="flex flex-wrap justify-center gap-4 mt-10 reveal opacity-70">
+            <span class="bg-white px-4 py-2 rounded-lg shadow-sm text-sm font-medium text-gray-600">🔒 SSL Secured</span>
+            <span class="bg-white px-4 py-2 rounded-lg shadow-sm text-sm font-medium text-gray-600">💳 Razorpay Partner</span>
+            <span class="bg-white px-4 py-2 rounded-lg shadow-sm text-sm font-medium text-gray-600">✅ Verified Service</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 8: FAQ ============ -->
+<section class="py-16 md:py-24 bg-white" id="faq">
+    <div class="container mx-auto px-5 max-w-3xl">
+        <div class="text-center mb-14 reveal">
+            <span class="text-saffron-500 font-semibold text-sm tracking-widest uppercase">Common Questions</span>
+            <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-deep mt-3">Frequently Asked</h2>
+        </div>
+
+        <div class="space-y-3 reveal">
+            <!-- FAQ Items will be injected by JS -->
+            <div id="faqContainer"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SECTION 9: FINAL CTA ============ -->
+<section class="py-20 md:py-28 relative overflow-hidden" id="final-cta">
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+        <img
+        src="https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?w=1200&h=800&fit=crop"
+        alt="Sacred Kumbh"
+        class="w-full h-full object-cover object-center"
+        loading="lazy"
+        >
+        <div class="absolute inset-0 bg-gradient-to-b from-saffron-900/85 via-saffron-800/80 to-deep/90"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-amber-400/10 blur-3xl pointer-events-none"></div>
+    </div>
+
+    <div class="relative z-10 container mx-auto px-5 max-w-3xl text-center">
+        <span class="inline-block text-5xl mb-6 animate-float">🕉️</span>
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5">
+            Book Your Kumbh<br>Snan Seva Today
+        </h2>
+        <p class="text-white/80 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+            Participate in this sacred spiritual opportunity from the comfort of your home. Divine blessings await you.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onclick="openCheckout(201, 'Digital Kumbh Snan Seva')"
+            class="btn-ripple w-full sm:w-auto bg-white text-saffron-700 font-bold text-lg px-10 py-4 rounded-2xl shadow-2xl hover:bg-amber-50 transition-all active:scale-95">
+            Book ₹201 Seva
+        </button>
+        <button onclick="openCheckout(501, 'Premium Digital Kumbh Snan Seva')"
+        class="btn-ripple w-full sm:w-auto bg-gradient-to-r from-gold-400 to-gold-600 text-white font-bold text-lg px-10 py-4 rounded-2xl shadow-2xl hover:from-gold-500 hover:to-gold-700 transition-all active:scale-95 animate-glow">
+        Book ₹501 Premium Seva ✨
+    </button>
+</div>
+</div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="py-8 bg-deep text-center text-white/50 text-sm">
+    <p>© 2026 Digital Kumbh Snan Seva. All rights reserved. | A sacred spiritual service.</p>
+    <p class="mt-1 text-xs">Secure payments powered by Razorpay. Your data is protected.</p>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/918275872736?text=Namaste!%20I%20want%20to%20book%20Kumbh%20Snan" target="_blank" class="wa-btn" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-</a>
-
-<!-- BOOKING POPUP -->
-<div class="popup-overlay" id="bookingPopup" onclick="handleOverlayClick(event)">
-  <div class="popup-box" id="popupBox">
-
-    <!-- FORM VIEW -->
-    <div id="popupForm">
-      <div class="popup-topbar"></div>
-      <div class="popup-header">
-        <div>
-          <div class="popup-title">Book Your Kumbh Snan 🕉</div>
-          <div class="popup-sub">Fill details — takes under 2 minutes</div>
-        </div>
-        <button class="popup-close" onclick="closePopup()">✕</button>
-      </div>
-      <div class="popup-body">
-        <div class="plan-preview" id="planPreview">
-          <div class="plan-preview-name" id="planName">Sampoorna Seva</div>
-          <div class="plan-preview-price" id="planPrice">₹501</div>
-        </div>
-
-        <div class="fr2">
-          <div class="fg">
-            <label class="fl">Full Name <span class="req">*</span></label>
-            <input type="text" class="fi" id="bName" placeholder="Your full name">
-          </div>
-          <div class="fg">
-            <label class="fl">Gotra <span style="color:var(--gray)">(optional)</span></label>
-            <input type="text" class="fi" id="bGotra" placeholder="e.g. Kashyap">
-          </div>
-        </div>
-        <div class="fr2">
-          <div class="fg">
-            <label class="fl">WhatsApp Number <span class="req">*</span></label>
-            <input type="tel" class="fi" id="bPhone" placeholder="+91 or international">
-          </div>
-          <div class="fg">
-            <label class="fl">Email <span class="req">*</span></label>
-            <input type="email" class="fi" id="bEmail" placeholder="you@email.com">
-          </div>
-        </div>
-        <div class="fg">
-          <label class="fl">Package <span class="req">*</span></label>
-          <select class="fs fi" id="bPlan" onchange="updatePlanPreview()">
-            <option value="">Choose your package...</option>
-            <option value="Divya Snan - Ritual + Video - ₹201">🙏 Divya Snan — Ritual + Video — ₹201</option>
-            <option value="Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501">⭐ Sampoorna Seva — Complete Blessing — ₹501</option>
-          </select>
-        </div>
-        <div class="fg">
-          <label class="fl">Country / City</label>
-          <input type="text" class="fi" id="bCountry" placeholder="e.g. London UK / Mumbai / Dubai UAE">
-        </div>
-        <button class="fsub" onclick="submitBooking()">🕉 Confirm &amp; Proceed to Payment →</button>
-        <p class="fnote">🔒 Secure via Razorpay &nbsp;|&nbsp; ✅ 500+ devotees served &nbsp;|&nbsp; 🎥 Video proof guaranteed</p>
-      </div>
-    </div>
-
-    <!-- THANK YOU VIEW -->
-    <div id="popupThanks" style="display:none">
-      <div class="popup-topbar"></div>
-      <div class="ty-box">
-        <div class="ty-ico">🙏</div>
-        <div class="ty-title">Booking <span style="color:var(--gold)">Confirmed!</span></div>
-        <p style="color:var(--gl);font-size:.93rem;line-height:1.7;margin-bottom:.5rem">Our team will contact you on WhatsApp within 1–2 hours to confirm your slot and guide you through the next steps.</p>
-        <div class="ns-list">
-          <div class="ns"><div class="ns-num">1</div><div class="ns-txt"><strong>Check WhatsApp</strong> — we'll send a booking confirmation soon.</div></div>
-          <div class="ns"><div class="ns-num">2</div><div class="ns-txt"><strong>Send your photo</strong> — share a clear photo of yourself (and family if needed).</div></div>
-          <div class="ns"><div class="ns-num">3</div><div class="ns-txt"><strong>Receive your video</strong> — within 24 hours of the ritual, we send your full video.</div></div>
-        </div>
-        <a href="https://wa.me/918275872736?text=Namaste!%20I%20just%20completed%20my%20Kumbh%20Snan%20booking.%20Please%20confirm%20my%20slot." target="_blank" class="btn-gold" style="width:100%;justify-content:center;margin-bottom:.75rem">
-          💬 Message Us on WhatsApp Now
-        </a>
-        <button class="btn-out" style="width:100%;justify-content:center" onclick="closePopup()">Close</button>
-      </div>
-    </div>
-  </div>
+<!-- ============ LIGHTBOX OVERLAY ============ -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+    <button class="absolute top-4 right-4 text-white text-4xl z-10 hover:text-gold-300 transition-colors" aria-label="Close lightbox">&times;</button>
+    <img src="" alt="Gallery image" id="lightboxImage">
 </div>
 
-<!-- Razorpay SDK -->
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
+<!-- ============ SCRIPTS ============ -->
+<script src="https://checkout.razorpay.com/v1/checkout.js">
+</script>
 <script>
-// ─── CONFIG ───────────────────────────────────────────────────────────────────
-const RZP_KEY = 'rzp_live_SyGiDr3YOJUq7C';
-const SHEET_ID = '1mpYXO0Ccl_FgICD4Bu8sdT7QffbVzRIr-MjbwYk18QM';
-// Google Apps Script Web App URL — replace with your deployed Apps Script URL
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxQZQZNvZPbLe44-YJQ95bFhUKXGxHFhRHmAoCwSLdOUHwQ7YqbhzDjUcYMFb-Rg3qJ/exec';
+    // ============ DATA ============
+    const testimonialsData = [
+        { name: 'Anita Sharma', location: 'Delhi', text: 'Very smooth booking process. I received confirmation after the seva. Highly satisfied with the service.',
+            rating: 5 },
+        { name: 'Rajesh Patel', location: 'Ahmedabad', text: 'Booked for my entire family. The process was simple and the confirmation came promptly. Feeling blessed.',
+            rating: 5 },
+        { name: 'Sunita Devi', location: 'Varanasi', text: 'Could not travel this year but this digital seva gave me peace of mind. Thank you for the wonderful service.',
+            rating: 5 },
+        { name: 'Mohan Lal Gupta', location: 'Jaipur', text: 'Premium package was worth it. Got detailed confirmation and felt truly connected to the Kumbh.',
+            rating: 5 },
+        { name: 'Priya Agarwal', location: 'Mumbai', text: 'I was skeptical at first but the process was very transparent. Got my confirmation within hours.',
+            rating: 4 },
+        { name: 'Vikram Singh', location: 'Lucknow', text: 'Booked for my parents. They were so happy. The seva was performed with proper sankalp. Highly recommended.',
+            rating: 5 },
+        { name: 'Kavita Joshi', location: 'Pune', text: 'Simple, straightforward, and spiritual. Exactly what I needed. Will book again next year.',
+            rating: 5 },
+        { name: 'Deepak Kumar', location: 'Patna', text: 'Good experience overall. The confirmation message was detailed and reassuring. Thank you.',
+            rating: 4 },
+        { name: 'Lakshmi Narayan', location: 'Chennai', text: 'Participating in Kumbh Snan from home felt impossible but this service made it real. Truly grateful.',
+            rating: 5 },
+        { name: 'Suresh Yadav', location: 'Gorakhpur', text: 'Premium package gave priority processing. Received confirmation very quickly. Excellent service.',
+            rating: 5 },
+    ];
 
-// ─── REVEAL ANIMATION ─────────────────────────────────────────────────────────
-const ro = new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');ro.unobserve(x.target)}})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+    const faqData = [
+        { q: 'What is Digital Kumbh Snan Seva?',
+            a: 'Digital Kumbh Snan Seva is a sacred service where dedicated priests perform the holy Kumbh Snan ritual on your behalf at the sacred site, with your name and gotra included in the sankalp (sacred vow). You receive the spiritual blessings remotely.' },
+        { q: 'How is the seva performed?',
+            a: 'Experienced and qualified priests perform the snan seva at the holy Kumbh site following all traditional rituals. Your name, gotra (if provided), and intention are recited during the sankalp before the holy dip.' },
+        { q: 'What happens after payment?',
+            a: 'After successful payment, your details are forwarded to our team at the Kumbh site. The seva is then performed at the next auspicious time, and you receive a confirmation message with details of the completed seva.' },
+        { q: 'How long does confirmation take?',
+            a: 'For the standard package (₹201), confirmation typically arrives within 24-48 hours. For the premium package (₹501), you receive priority processing and confirmation within 12-24 hours.' },
+        { q: 'Can I book for family members?',
+            a: 'Yes! You can book seva for yourself, your spouse, children, parents, or any loved one. During the booking process, you can provide the names of all individuals you wish to include.' },
+        { q: 'Is payment secure?',
+            a: 'Absolutely. All payments are processed through Razorpay, India\'s leading payment gateway, with 256-bit SSL encryption. Your payment information is fully secure and never stored on our servers.' },
+    ];
 
-// ─── FAQ ──────────────────────────────────────────────────────────────────────
-function toggleFaq(btn){
-  const a=btn.nextElementSibling,open=btn.classList.contains('open');
-  document.querySelectorAll('.faq-q.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open')});
-  if(!open){btn.classList.add('open');a.classList.add('open')}
-}
+    // ============ INITIALIZE TESTIMONIALS ============
+    const testimonialTrack = document.getElementById('testimonialTrack');
+    const testimonialDots = document.getElementById('testimonialDots');
+    let currentTestimonial = 0;
 
-// ─── PLAN MAP ─────────────────────────────────────────────────────────────────
-const PLANS={
-  'Divya Snan - Ritual + Video - ₹201':{name:'Divya Snan — Ritual + Video',price:'₹1',amount:100},
-  'Sampoorna Seva - Ritual + Video + Ganga Jal + Prasad - ₹501':{name:'Sampoorna Seva — Complete Blessing',price:'₹501',amount:50100},
-};
+    function renderTestimonials() {
+        testimonialTrack.innerHTML = testimonialsData.map((t, i) => `
+        <div class="testimonial-slide px-4">
+        <div class="bg-cream rounded-3xl p-8 md:p-10 text-center max-w-lg mx-auto shadow-lg">
+        <div class="text-yellow-400 text-2xl mb-3">${'★'.repeat(t.rating)}${t.rating < 5 ? '☆'.repeat(5 - t
+            .rating) : ''}</div>
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-5 italic">"${t.text}"</p>
+        <p class="font-heading font-bold text-deep text-lg">${t.name}</p>
+        <p class="text-gray-400 text-sm">${t.location}</p>
+        </div>
+        </div>
+        `).join('');
 
-// ─── POPUP ────────────────────────────────────────────────────────────────────
-function openPopup(planKey){
-  document.getElementById('popupForm').style.display='block';
-  document.getElementById('popupThanks').style.display='none';
-  // Only pre-select if a specific planKey was passed; otherwise leave at placeholder
-  if(planKey){
-    document.getElementById('bPlan').value=planKey;
-  } else {
-    document.getElementById('bPlan').value='';
-  }
-  updatePlanPreview();
-  document.getElementById('bookingPopup').classList.add('open');
-  document.body.style.overflow='hidden';
-  if(typeof fbq!=='undefined') fbq('track','InitiateCheckout');
-}
+        testimonialDots.innerHTML = testimonialsData.map((_, i) => `
+        <button onclick="goToTestimonial(${i})"
+        class="w-3 h-3 rounded-full transition-all ${i === currentTestimonial ? 'bg-saffron-500 w-6' : 'bg-gray-300'}"
+        aria-label="Go to testimonial ${i + 1}"></button>
+        `).join('');
 
-function closePopup(){
-  document.getElementById('bookingPopup').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function handleOverlayClick(e){if(e.target===document.getElementById('bookingPopup'))closePopup()}
-
-function updatePlanPreview(){
-  const v=document.getElementById('bPlan').value,p=PLANS[v],pr=document.getElementById('planPreview');
-  if(p){document.getElementById('planName').textContent=p.name;document.getElementById('planPrice').textContent=p.price;pr.style.display='flex'}
-  else pr.style.display='none';
-}
-
-// ─── GOOGLE SHEET SUBMISSION ──────────────────────────────────────────────────
-function submitToSheet(data){
-  fetch(SHEET_URL,{
-    method:'POST',
-    mode:'no-cors',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(data)
-  }).catch(err=>console.error('Sheet submission error:',err));
-}
-
-// ─── RAZORPAY PAYMENT ─────────────────────────────────────────────────────────
-function submitBooking(){
-  const name    = document.getElementById('bName').value.trim();
-  const phone   = document.getElementById('bPhone').value.trim();
-  const email   = document.getElementById('bEmail').value.trim();
-  const plan    = document.getElementById('bPlan').value;
-  const gotra   = document.getElementById('bGotra').value.trim();
-  const country = document.getElementById('bCountry').value.trim();
-  const message = document.getElementById('bMessage') ? document.getElementById('bMessage').value.trim() : '';
-
-  // Validation
-  if(!name)   {alert('Please enter your full name.');document.getElementById('bName').focus();return}
-  if(!phone)  {alert('Please enter your WhatsApp number.');document.getElementById('bPhone').focus();return}
-  if(!email)  {alert('Please enter your email address.');document.getElementById('bEmail').focus();return}
-  if(!plan)   {alert('Please select a package.');document.getElementById('bPlan').focus();return}
-
-  const planData = PLANS[plan];
-  if(!planData){alert('Invalid package selected. Please choose again.');return}
-
-  // Disable button to prevent double-click
-  const submitBtn = document.querySelector('.fsub');
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Opening Payment…';
-
-  const options = {
-    key: RZP_KEY,
-    amount: planData.amount,        // in paise
-    currency: 'INR',
-    name: 'Kumbh Snan',
-    description: planData.name,
-    image: 'https://kumbh-snan.com/favicon.png',
-    prefill: {
-      name: name,
-      email: email,
-      contact: phone
-    },
-    notes: {
-      gotra: gotra || 'Not provided',
-      country: country || 'Not provided',
-      package: plan
-    },
-    theme: { color: '#C9A84C' },
-    modal: {
-      ondismiss: function(){
-        submitBtn.disabled = false;
-        submitBtn.textContent = '🕉 Confirm & Proceed to Payment →';
-      }
-    },
-    handler: function(response){
-      // Payment SUCCESS
-      const paymentId = response.razorpay_payment_id;
-      const timestamp = new Date().toISOString();
-      const price = planData.amount / 100;
-
-      // Fire Facebook pixel
-      if(typeof fbq!=='undefined'){
-        fbq('track','Purchase',{value:price,currency:'INR'});
-        fbq('track','Lead');
-      }
-
-      // Submit to Google Sheet
-      submitToSheet({
-        Timestamp:  timestamp,
-        Name:       name,
-        Gotra:      gotra || '',
-        Phone:      phone,
-        Email:      email,
-        Package:    plan,
-        Country:    country || '',
-        Message:    message || '',
-        'Payment ID': paymentId,
-        Status:     'Success',
-        Amount:     price
-      });
-
-      // Show Thank You screen
-      document.getElementById('popupForm').style.display='none';
-      document.getElementById('popupThanks').style.display='block';
-
-      submitBtn.disabled = false;
-      submitBtn.textContent = '🕉 Confirm & Proceed to Payment →';
-    },
-    // Also handle payment failure (log but don't show thank you)
-    'payment.failed': function(response){
-      const timestamp = new Date().toISOString();
-      submitToSheet({
-        Timestamp:  timestamp,
-        Name:       name,
-        Gotra:      gotra || '',
-        Phone:      phone,
-        Email:      email,
-        Package:    plan,
-        Country:    country || '',
-        Message:    message || '',
-        'Payment ID': response.error.metadata ? response.error.metadata.payment_id : '',
-        Status:     'Failed - ' + (response.error.description || 'Unknown'),
-        Amount:     planData.amount / 100
-      });
-      alert('Payment failed: ' + (response.error.description || 'Please try again or contact us on WhatsApp.'));
-      submitBtn.disabled = false;
-      submitBtn.textContent = '🕉 Confirm & Proceed to Payment →';
+        updateTestimonialPosition();
     }
-  };
 
-  const rzp = new Razorpay(options);
-  rzp.on('payment.failed', options['payment.failed']);
-  rzp.open();
-}
+    function updateTestimonialPosition() {
+        const slideWidth = testimonialTrack.querySelector('.testimonial-slide')?.offsetWidth || 300;
+        testimonialTrack.scrollTo({ left: currentTestimonial * (slideWidth + 32), behavior: 'smooth' });
+        // Update dots
+        const dots = testimonialDots.querySelectorAll('button');
+        dots.forEach((dot, i) => {
+            dot.className = `w-3 h-3 rounded-full transition-all ${i === currentTestimonial ? 'bg-saffron-500 w-6' : 'bg-gray-300'}`;
+        });
+    }
 
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closePopup()});
+    function moveTestimonial(direction) {
+        currentTestimonial = (currentTestimonial + direction + testimonialsData.length) % testimonialsData.length;
+        updateTestimonialPosition();
+    }
+
+    function goToTestimonial(index) {
+        currentTestimonial = index;
+        updateTestimonialPosition();
+    }
+
+    // Auto-rotate
+    let autoRotateInterval;
+
+    function startAutoRotate() {
+        autoRotateInterval = setInterval(() => moveTestimonial(1), 4500);
+    }
+
+    function stopAutoRotate() {
+        clearInterval(autoRotateInterval);
+    }
+
+    testimonialTrack.addEventListener('mouseenter', stopAutoRotate);
+    testimonialTrack.addEventListener('touchstart', stopAutoRotate);
+    testimonialTrack.addEventListener('mouseleave', startAutoRotate);
+    testimonialTrack.addEventListener('touchend', () => setTimeout(startAutoRotate, 2000));
+
+    renderTestimonials();
+    startAutoRotate();
+
+    // ============ INITIALIZE FAQ ============
+    const faqContainer = document.getElementById('faqContainer');
+
+    function renderFAQ() {
+        faqContainer.innerHTML = faqData.map((faq, i) => `
+        <div class="faq-item bg-cream rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all" data-index="${i}">
+        <button class="w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-saffron-50/50 transition-colors"
+        onclick="toggleFAQ(${i})" aria-expanded="false">
+        <span class="font-heading font-bold text-deep text-base md:text-lg pr-4">${faq.q}</span>
+        <span class="faq-icon text-saffron-500 text-2xl flex-shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-answer px-5 md:px-6 text-gray-600 text-sm md:text-base leading-relaxed">
+        ${faq.a}
+        </div>
+        </div>
+        `).join('');
+    }
+
+    function toggleFAQ(index) {
+        const items = document.querySelectorAll('.faq-item');
+        items.forEach((item, i) => {
+            if (i === index) {
+                const isActive = item.classList.contains('active');
+                // Close all
+                items.forEach(it => it.classList.remove('active'));
+                // Toggle clicked
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.querySelector('button').setAttribute('aria-expanded', 'true');
+                } else {
+                    item.querySelector('button').setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+    }
+
+    renderFAQ();
+
+    // ============ LIGHTBOX ============
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxImage = document.getElementById('lightboxImage');
+
+    function openLightbox(element) {
+        const img = element.querySelector('img');
+        if (img) {
+            lightboxImage.src = img.src;
+            lightboxOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeLightbox() {
+        lightboxOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    lightboxOverlay.addEventListener('click', function(e) {
+        if (e.target === lightboxOverlay) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    // ============ STICKY CTA BAR ============
+    const stickyCtaBar = document.getElementById('stickyCtaBar');
+    const heroSection = document.getElementById('hero');
+    let stickyBarVisible = false;
+
+    function updateStickyBar() {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        if (heroBottom < -100 && !stickyBarVisible) {
+            stickyCtaBar.classList.add('visible');
+            stickyBarVisible = true;
+        } else if (heroBottom >= -100 && stickyBarVisible) {
+            stickyCtaBar.classList.remove('visible');
+            stickyBarVisible = false;
+        }
+    }
+
+    window.addEventListener('scroll', updateStickyBar, { passive: true });
+    updateStickyBar();
+
+    // ============ RAZORPAY CHECKOUT ============
+    function openCheckout(amount, packageName) {
+        // Track InitiateCheckout
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'InitiateCheckout', {
+                content_name: packageName,
+                value: amount,
+                currency: 'INR',
+            });
+        }
+
+        const options = {
+            key: 'YOUR_RAZORPAY_KEY_ID', // Replace with your actual Razorpay Key ID
+            amount: amount * 100, // Amount in paise
+            currency: 'INR',
+            name: 'Digital Kumbh Snan Seva',
+            description: packageName,
+            image: 'https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?w=200&h=200&fit=crop',
+            handler: function(response) {
+                // Track Purchase
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Purchase', {
+                        content_name: packageName,
+                        value: amount,
+                        currency: 'INR',
+                        transaction_id: response.razorpay_payment_id,
+                    });
+                }
+                // Success message
+                alert(
+                    '🙏 Thank you for booking the ' + packageName +
+                    '!\n\nYour payment was successful. You will receive confirmation after the seva is performed.\n\nPayment ID: ' +
+                    response.razorpay_payment_id);
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            },
+            modal: {
+                ondismiss: function() {
+                    // Track AddPaymentInfo if they started filling
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'AddPaymentInfo', {
+                            content_name: packageName,
+                            value: amount,
+                            currency: 'INR',
+                        });
+                    }
+                },
+                escape: true,
+                animation: true,
+            },
+            prefill: {
+                name: '',
+                email: '',
+                contact: '',
+            },
+            notes: {
+                package: packageName,
+            },
+            theme: {
+                color: '#E8651A',
+            },
+        };
+
+        const rzp = new Razorpay(options);
+
+        rzp.on('payment.failed', function(response) {
+            alert(
+                'Payment was not completed. Please try again or contact support.\n\nError: ' + response.error
+                .description);
+        });
+
+        rzp.open();
+    }
+
+    // ============ SCROLL REVEAL ANIMATIONS ============
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px',
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ============ SMOOTH SCROLL FOR ANCHOR LINKS ============
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // ============ INITIALIZATION LOG ============ 
+    console.log('🕉️ Digital Kumbh Snan Seva - Landing Page Ready');
+    console.log('📊 Meta Pixel ID:', META_PIXEL_ID);
+    console.log('💳 Razorpay Integration: Ready');
+    console.log('📱 Mobile-first design: Active');
+    console.log('✅ All sections loaded successfully');
+</script>
+
+<!-- ============ SCHEMA MARKUP FOR SEO ============ -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Digital Kumbh Snan Seva",
+        "description": "Receive the blessings of the holy Kumbh Snan from your home through a dedicated spiritual seva performed on your behalf.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Digital Kumbh Snan Seva"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Digital Kumbh Snan Seva",
+                "price": "201",
+                "priceCurrency": "INR"
+            },
+            {
+                "@type": "Offer",
+                "name": "Premium Digital Kumbh Snan Seva",
+                "price": "501",
+                "priceCurrency": "INR"
+            }
+        ]
+    }
 </script>
 </body>
 </html>
