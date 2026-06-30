@@ -1,0 +1,28 @@
+<div>
+  <div class="page-header">
+    <div class="header-left">
+      <h1>My Tasks</h1>
+      <p>Manage your daily habits and routines</p>
+    </div>
+    <div class="header-right">
+      <button class="btn btn-primary" id="addTaskBtn2">+ Add Task</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="task-filters">
+      <input type="text" class="search-input" id="taskSearch" placeholder="Search tasks…">
+      <div class="filter-chip active" data-filter="all">All</div>
+      <div class="filter-chip" data-filter="today">Today</div>
+      <div class="filter-chip" data-filter="work">Work</div>
+      <div class="filter-chip" data-filter="health">Health</div>
+      <div class="filter-chip" data-filter="study">Study</div>
+      <div class="filter-chip" data-filter="fitness">Fitness</div>
+      <div class="filter-chip" data-filter="personal">Personal</div>
+    </div>
+    <div class="task-list" id="mainTaskList"></div>
+    <div class="empty-state" id="taskEmptyState" style="display:none">
+      <div class="empty-icon">📭</div>
+      <p>No tasks found. Add your first habit!</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+.settings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--neu-raised-sm);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.setting-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.setting-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.toggle-switch {
+  width: 46px;
+  height: 26px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--neu-pressed-sm);
+  border-radius: 13px;
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.toggle-switch.on {
+  box-shadow: var(--neu-pressed-sm), inset 0 0 0 1px var(--accent-glow);
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-elevated);
+  box-shadow: var(--neu-raised-sm), 0 0 0 1px var(--border-strong);
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.toggle-switch.on::after {
+  transform: translateX(20px);
+  background: var(--gradient-1);
+  box-shadow: var(--neu-raised-sm);
+}

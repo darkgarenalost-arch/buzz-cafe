@@ -1,0 +1,21 @@
+{
+  "name": "Track U",
+  "short_name": "Track U",
+  "description": "Daily progress tracker with streaks, XP, and achievements",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1224",
+  "theme_color": "#6c63ff",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

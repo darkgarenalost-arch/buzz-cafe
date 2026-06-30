@@ -1,0 +1,49 @@
+<div>
+  <div class="page-header">
+    <div class="header-left"><h1>Pomodoro Timer</h1><p>Stay focused, one session at a time</p></div>
+  </div>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;">
+    <div class="card" style="flex:0 0 280px;">
+      <div class="pomodoro-wrap">
+        <div class="pom-mode" id="pomMode">🍅 Focus Time</div>
+        <div class="pomodoro-ring">
+          <svg width="140" height="140" viewBox="0 0 140 140">
+            <defs>
+              <linearGradient id="pomGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fc5c7d"/>
+                <stop offset="100%" stop-color="#f9a825"/>
+              </linearGradient>
+            </defs>
+            <circle class="pom-bg" cx="70" cy="70" r="60"/>
+            <circle class="pom-fg" id="pomCircle" cx="70" cy="70" r="60"
+              stroke="url(#pomGrad2)"
+              stroke-dasharray="377" stroke-dashoffset="0"
+              fill="none" stroke-width="6" stroke-linecap="round"
+              transform="rotate(-90 70 70)"/>
+          </svg>
+          <div class="pomodoro-time" id="pomTime">25:00</div>
+        </div>
+        <div class="pomodoro-controls">
+          <button class="btn btn-primary" id="pomStart">▶ Start</button>
+          <button class="btn btn-secondary" id="pomReset">↺</button>
+        </div>
+        <div class="pom-sessions">Sessions: <span id="pomSessionCount">0</span></div>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <button class="btn btn-secondary" style="font-size:11px;padding:6px 10px;" id="pomFocusBtn">🍅 25m</button>
+          <button class="btn btn-secondary" style="font-size:11px;padding:6px 10px;" id="pomShortBtn">☕ 5m</button>
+          <button class="btn btn-secondary" style="font-size:11px;padding:6px 10px;" id="pomLongBtn">🌿 15m</button>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:12px;align-items:center;">
+          <input type="number" id="pomCustomMin" class="form-input" style="width:70px;padding:4px 8px;border-radius:10px;" placeholder="min" min="1" max="120" value="25">
+          <button class="btn btn-secondary" id="pomCustomBtn" style="font-size:11px;padding:4px 10px;">Set Custom</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="flex:1;min-width:200px;">
+      <div class="card-title" style="margin-bottom:14px;"><span class="title-icon">🍅</span> Pomodoro Log</div>
+      <div id="pomLog" style="display:flex;flex-direction:column;gap:8px;max-height:300px;overflow-y:auto;">
+        <div style="color:var(--text-muted);font-size:13px;">No sessions yet. Start your first Pomodoro!</div>
+      </div>
+    </div>
+  </div>
+</div>

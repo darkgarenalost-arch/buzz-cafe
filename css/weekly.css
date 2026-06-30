@@ -1,0 +1,45 @@
+.weekly-days {
+  display: flex;
+  gap: 8px;
+}
+
+.wday {
+  flex: 1;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--neu-flat);
+  padding: 12px 4px;
+  min-width: 0;
+}
+
+.wday-name {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.wday-pct {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.wday-bar-wrap {
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 6px 0;
+}
+
+.wday-bar {
+  width: 8px;
+  border-radius: 4px 4px 0 0;
+  background: var(--gradient-1);
+  transition: height 0.6s cubic-bezier(0.4,0,0.2,1);
+  min-height: 2px;
+}
