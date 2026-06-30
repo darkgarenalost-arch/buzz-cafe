@@ -1371,15 +1371,6 @@ canvas { max-width: 100%; }
     <div class="page-header">
       <div class="header-left"><h1>Progress Graph</h1><p>Your consistency over time</p></div>
     </div>
-    <div class="premium-gate" data-premium-gate="progress">
-      <span class="premium-pill">Premium</span>
-      <h2>Unlock Progress Analytics</h2>
-      <p>Track completion, focus minutes, XP velocity, category mix, and trend changes across 7-day, 30-day, 90-day, and all-time views.</p>
-      <div class="premium-features">
-        <div class="premium-feature">Multi-metric timeline with tooltips</div>
-        <div class="premium-feature">Trend comparison vs previous period</div>
-        <div class="premium-feature">Deep statistics dashboard included</div>
-      </div>
       <button class="btn btn-primary" data-upgrade-trigger>Upgrade - INR 99/month</button>
     </div>
     <div class="insight-grid premium-content" data-premium-content="progress" id="progressInsights"></div>
@@ -1411,15 +1402,6 @@ canvas { max-width: 100%; }
     <div class="page-header">
       <div class="header-left"><h1>Habit Heatmap</h1><p>365 days of activity</p></div>
     </div>
-    <div class="premium-gate" data-premium-gate="heatmap">
-      <span class="premium-pill">Premium</span>
-      <h2>Unlock Productivity Heatmap</h2>
-      <p>Explore a full contribution-style calendar with activity intensity, streak summaries, filters, and tap details.</p>
-      <div class="premium-features">
-        <div class="premium-feature">Intensity based on productivity volume</div>
-        <div class="premium-feature">Current and best streak summaries</div>
-        <div class="premium-feature">Category/date detail panel</div>
-      </div>
       <button class="btn btn-primary" data-upgrade-trigger>Upgrade - INR 99/month</button>
     </div>
     <div class="heatmap-summary premium-content" data-premium-content="heatmap" id="heatmapSummary"></div>
@@ -1466,15 +1448,6 @@ canvas { max-width: 100%; }
     <div class="page-header">
       <div class="header-left"><h1>Statistics</h1><p>Deep dive into your data</p></div>
     </div>
-    <div class="premium-gate" data-premium-gate="stats">
-      <span class="premium-pill">Premium</span>
-      <h2>Unlock Advanced Statistics</h2>
-      <p>See completion velocity, strongest time windows, category breakdowns, and previous-period comparisons.</p>
-      <div class="premium-features">
-        <div class="premium-feature">Average completion and focus consistency</div>
-        <div class="premium-feature">Best day and category performance</div>
-        <div class="premium-feature">Period-over-period comparisons</div>
-      </div>
       <button class="btn btn-primary" data-upgrade-trigger>Upgrade - INR 99/month</button>
     </div>
     <div class="grid-3" id="statsGrid"></div>
@@ -3408,7 +3381,7 @@ document.addEventListener('DOMContentLoaded', init);
   window.isPremiumActive = isPremiumActive;
 
   function setPremiumVisibility() {
-    ['progress','heatmap','stats','weekly'].forEach(id => {
+    [].forEach(id => {
       const section = document.getElementById('section-' + id);
       if (!section) return;
       const locked = !isPremiumActive();
