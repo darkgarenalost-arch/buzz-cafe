@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kumbh-snan.com/sitemap.xml
