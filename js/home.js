@@ -6,26 +6,11 @@ renderShell("home");
 
 const banners = await getBanners();
 const heroBg = $("#hero-bg");
-const heroEyebrow = $("#hero-eyebrow");
-const heroTitle = $("#hero-title");
-const heroSubtitle = $("#hero-subtitle");
-const heroCta = $("#hero-cta");
 
-heroBg.innerHTML = banners.map((banner, index) => `<img class="${index === 0 ? "active" : ""}" src="${banner.image}" alt="${banner.title}">`).join("");
-let activeBanner = 0;
-function setBanner(index) {
-  const banner = banners[index];
-  heroBg.querySelectorAll("img").forEach((img, imgIndex) => img.classList.toggle("active", imgIndex === index));
-  heroEyebrow.textContent = banner.eyebrow || "Clad Whale";
-  heroTitle.textContent = banner.title || "Clad Whale";
-  heroSubtitle.textContent = banner.subtitle || "";
-  heroCta.textContent = banner.cta || "Shop now";
-  heroCta.href = banner.link || "products/";
+// Static hero background — uses the first active banner image, no rotation, no auto-changing copy.
+if (heroBg && banners[0]) {
+  heroBg.innerHTML = `<img class="active" src="${banners[0].image}" alt="Clad Whale">`;
 }
-setInterval(() => {
-  activeBanner = (activeBanner + 1) % banners.length;
-  setBanner(activeBanner);
-}, 5200);
 
 $("#category-grid").innerHTML = categories.map((category) => `
   <a class="category-card reveal" href="products/?category=${category.slug}">
@@ -59,4 +44,3 @@ $("#review-grid").innerHTML = reviews.map((review) => `
 `).join("");
 
 initReveal();
-
