@@ -1,212 +1,560 @@
-<!doctype html>
-<html lang="en-IN">
-  <head>
-    <!-- Meta Pixel Code -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Clad Whale | Unisex Streetwear, Made In Monochrome</title>
-    <meta name="description" content="Clad Whale is a unisex streetwear label — oversized tees, hoodies, joggers and jackets in black, white and grey. One tribe, no labels, COD-first shopping.">
-    <meta property="og:title" content="Clad Whale | Unisex Streetwear">
-    <meta property="og:description" content="Oversized tees, hoodies, joggers and jackets built for everyone. Monochrome mood, COD-first checkout.">
-    <meta property="og:image" content="assets/images/logo.png">
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2104801253414514');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2104801253414514&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <div class="page-shell">
-      <div class="announce-bar">
-        <span>Cash On Delivery Available</span>
-        <span>Unisex Sizing On Every Piece</span>
-        <span>Free Shipping On Prepaid Orders</span>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLAD WHALE | Built Different. Made To Stand Out.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#050c14;
+    --bg2:#0a1420;
+    --panel:#0d1826;
+    --border:rgba(255,255,255,0.08);
+    --blue:#2fb2ff;
+    --text:#f5f7fa;
+    --muted:#93a2b3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Poppins',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
 
-      <header id="site-header"></header>
+  /* Top bar */
+  .topbar{
+    background:#000;
+    text-align:center;
+    font-size:12px;
+    letter-spacing:1px;
+    padding:8px 0;
+    color:#e6edf3;
+  }
+  .topbar .dot{
+    display:inline-block;
+    width:6px;height:6px;
+    background:var(--blue);
+    border-radius:50%;
+    margin-right:8px;
+    vertical-align:middle;
+  }
 
-      <main>
-        <section class="hero-static" id="hero">
-          <div class="hero-bg" id="hero-bg"></div>
-          <div class="container">
-            <div class="hero-grid">
-              <div class="hero-copy">
-                <span class="hero-badge">New Season / 2026 Collection</span>
-                <h1>Clad In Black.<br>Built For Everyone.</h1>
-                <p>Oversized tees, heavyweight hoodies, joggers and jackets — cut unisex, priced fair. No "his" or "hers" aisle, just one wardrobe for one tribe.</p>
-                <div class="hero-actions">
-                  <a class="btn-primary" href="products/">Shop New Arrivals</a>
-                  <a class="btn-secondary" href="products/?tag=best-seller">View Best Sellers</a>
-                </div>
-                <div class="hero-stats">
-                  <div><strong>6+</strong><span>Core Categories</span></div>
-                  <div><strong>100%</strong><span>Unisex Fit</span></div>
-                  <div><strong>COD</strong><span>Pay On Delivery</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  /* Header */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 40px;
+    border-bottom:1px solid var(--border);
+    position:relative;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo-mark{
+    width:44px;height:44px;
+    object-fit:contain;
+    object-position:center;
+    filter:drop-shadow(0 0 6px rgba(47,178,255,0.4));
+  }
+  .logo .name{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:4px;
+    font-family:'Poppins',Arial,sans-serif;
+  }
+  .logo .name span{color:var(--blue);}
+  nav ul{
+    display:flex;
+    gap:36px;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:500;
+  }
+  nav a{color:var(--muted);transition:color .2s;}
+  nav a.active{color:var(--blue);}
+  nav a.active::after{
+    content:'';
+    display:block;
+    height:2px;
+    background:var(--blue);
+    margin-top:8px;
+  }
+  .icons{
+    display:flex;
+    align-items:center;
+    gap:22px;
+  }
+  .icons svg{width:20px;height:20px;stroke:var(--text);cursor:pointer;}
+  .bag{position:relative;}
+  .badge{
+    position:absolute;
+    top:-8px;right:-10px;
+    background:var(--blue);
+    color:#001521;
+    font-size:10px;
+    font-weight:700;
+    width:16px;height:16px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;}
+  .menu-btn svg{width:24px;height:24px;stroke:var(--text);}
 
-        <div class="feature-bar">
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l4 4v6h-2M3 7v10h2M16 7v10M3 12h13"/><circle cx="7.5" cy="17.5" r="1.7"/><circle cx="17.5" cy="17.5" r="1.7"/></svg>
-            <div><strong>Cash On Delivery</strong><span>Pay when it lands</span></div>
-          </div>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18 9l-4.1 1.4L12 15l-1.9-4.6L6 9l4.1-1.4L12 3z"/><path d="M5 15l.7 1.7L7.5 17l-1.8.6L5 19.3l-.7-1.7L2.5 17l1.8-.6L5 15z"/></svg>
-            <div><strong>Unisex Fit</strong><span>One size chart, all bodies</span></div>
-          </div>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-            <div><strong>Secure Checkout</strong><span>Razorpay + COD</span></div>
-          </div>
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v5H4z"/><path d="M4 9l1.5 11h13L20 9"/><path d="M9 13h6"/></svg>
-            <div><strong>Easy Exchange</strong><span>Wrong size, sorted fast</span></div>
-          </div>
-        </div>
+  /* Hero */
+  .hero{
+    position:relative;
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    padding:60px 40px;
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;
+    inset:0;
+    z-index:0;
+  }
+  .hero-bg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:60% center;
+  }
+  .hero-bg::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, var(--bg) 0%, rgba(5,12,20,0.85) 22%, rgba(5,12,20,0.35) 45%, rgba(5,12,20,0) 65%);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+  }
+  .hero-copy{max-width:460px;}
+  .hero-copy .tag{
+    color:var(--blue);
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  .hero-copy h1{
+    font-size:46px;
+    line-height:1.15;
+    font-weight:900;
+    letter-spacing:.5px;
+    margin-bottom:18px;
+  }
+  .hero-copy p{
+    color:var(--muted);
+    font-size:15px;
+    max-width:320px;
+    margin-bottom:28px;
+    line-height:1.5;
+  }
+  .btn-row{display:flex;gap:14px;margin-bottom:34px;flex-wrap:wrap;}
+  .btn{
+    padding:14px 26px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:4px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  }
+  .btn-primary{
+    background:var(--blue);
+    color:#001521;
+    border:none;
+    box-shadow:0 0 18px rgba(47,178,255,0.55), 0 0 40px rgba(47,178,255,0.25);
+  }
+  .btn-primary:hover{
+    box-shadow:0 0 26px rgba(47,178,255,0.85), 0 0 60px rgba(47,178,255,0.4);
+    transform:translateY(-1px);
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--text);
+    border:1px solid rgba(255,255,255,0.25);
+  }
+  .btn-outline:hover{
+    border-color:var(--blue);
+    box-shadow:0 0 16px rgba(47,178,255,0.35);
+  }
+  .trust{
+    font-size:12px;
+    color:var(--blue);
+    letter-spacing:1px;
+    margin-bottom:10px;
+  }
+  .avatars{display:flex;align-items:center;gap:10px;}
+  .avatars .stack{display:flex;}
+  .avatars .stack img{
+    width:32px;height:32px;border-radius:50%;
+    border:2px solid var(--bg);
+    margin-left:-10px;
+    object-fit:cover;
+    background:#334;
+  }
+  .avatars .stack img:first-child{margin-left:0;}
+  .rating{color:var(--blue);font-weight:700;font-size:14px;}
 
-        <section class="section section-light">
-          <div class="container">
-            <div class="section-head reveal">
-              <div>
-                <span class="eyebrow">Shop by category</span>
-                <h2 class="section-title">Wear your uniform</h2>
-              </div>
-              <a href="products/" class="btn-dark">Shop all</a>
-            </div>
-            <div class="category-grid" id="category-grid"></div>
-          </div>
-        </section>
+  .hero-nums{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    color:var(--muted);
+    font-weight:700;
+    font-size:14px;
+  }
+  .hero-nums .num{color:var(--muted);}
+  .hero-nums .num.active{color:var(--blue);}
+  .hero-nums .line{width:1px;height:24px;background:var(--border);}
 
-        <section class="section pt-0">
-          <div class="container">
-            <div class="section-head reveal">
-              <div>
-                <span class="eyebrow">Trending now</span>
-                <h2 class="section-title">New arrivals</h2>
-              </div>
-              <a href="products/?tag=new-arrival" class="btn-soft">View drop</a>
-            </div>
-            <div class="product-grid" id="new-arrivals"></div>
-          </div>
-        </section>
+  /* Features */
+  .features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--border);
+    border-radius:8px;
+    margin:20px 40px 60px;
+    padding:26px 10px;
+  }
+  .feature{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:0 20px;
+    border-right:1px solid var(--border);
+  }
+  .feature:last-child{border-right:none;}
+  .feature svg{width:26px;height:26px;stroke:var(--blue);flex-shrink:0;}
+  .feature h4{font-size:13px;font-weight:700;margin-bottom:4px;letter-spacing:.5px;}
+  .feature p{font-size:12px;color:var(--muted);}
 
-        <section class="section">
-          <div class="container">
-            <div class="promo-banner reveal" style="background-image:url('https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=1800&q=85')">
-              <div class="promo-banner-content">
-                <span class="eyebrow">Limited run</span>
-                <h2>The Monochrome Pack</h2>
-                <p>Deep black, bone white and steel grey — engineered layers built for everyday armor. Unisex sizing, one drop, while it lasts.</p>
-                <a href="products/?tag=best-seller" class="btn-primary">Shop The Pack</a>
-              </div>
-            </div>
-          </div>
-        </section>
+  /* Featured collection */
+  .collection{padding:0 40px 80px;}
+  .collection .eyebrow{
+    color:var(--blue);
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .collection-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:30px;
+  }
+  .collection-head h2{font-size:30px;font-weight:800;letter-spacing:.5px;}
+  .view-all{color:var(--blue);font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    position:relative;
+  }
+  .card .imgwrap{
+    aspect-ratio:1/1.05;
+    display:flex;align-items:center;justify-content:center;
+    background:#0a1420;
+    padding:14px;
+    position:relative;
+  }
+  .card .imgwrap img{width:100%;height:100%;object-fit:cover;border-radius:4px;}
+  .heart{
+    position:absolute;top:14px;right:14px;
+    width:18px;height:18px;stroke:var(--muted);
+    display:none;
+  }
+  .card-info{
+    padding:14px 16px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .card-info h3{font-size:14px;font-weight:600;margin-bottom:6px;}
+  .card-info .price{color:var(--muted);font-size:13px;}
+  .plus{
+    width:32px;height:32px;
+    border-radius:50%;
+    background:var(--blue);
+    color:#001521;
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;
+    font-weight:700;
+    flex-shrink:0;
+    cursor:pointer;
+    border:none;
+    box-shadow:0 0 14px rgba(47,178,255,0.55);
+    transition:box-shadow .25s ease, transform .25s ease;
+  }
+  .plus:hover{
+    box-shadow:0 0 22px rgba(47,178,255,0.85);
+    transform:scale(1.06);
+  }
 
-        <section class="section section-light">
-          <div class="container">
-            <div class="section-head reveal">
-              <div>
-                <span class="eyebrow">Most loved</span>
-                <h2 class="section-title">Best sellers</h2>
-              </div>
-              <a href="products/?tag=best-seller" class="btn-dark">Shop best sellers</a>
-            </div>
-            <div class="product-grid" id="best-sellers"></div>
-          </div>
-        </section>
+  footer{
+    text-align:center;
+    padding:30px;
+    color:var(--muted);
+    font-size:12px;
+    border-top:1px solid var(--border);
+  }
 
-        <section class="section">
-          <div class="container">
-            <div class="section-head reveal">
-              <div>
-                <span class="eyebrow">Why Clad Whale</span>
-                <h2 class="section-title">Built with intent</h2>
-              </div>
-            </div>
-            <div class="pillar-grid reveal">
-              <div class="pillar-card">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
-                <h3>Unisex By Design</h3>
-                <p>Every fit, every size chart and every cut is built from scratch to work for any body — no gendered sections, no guesswork.</p>
-              </div>
-              <div class="pillar-card">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 21V9"/></svg>
-                <h3>Heavyweight Fabric</h3>
-                <p>240+ GSM cotton on tees and hoodies so they hold shape wash after wash, instead of thinning out after a season.</p>
-              </div>
-              <div class="pillar-card">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L4 14h6l-1 7 9-11h-6l1-7z"/></svg>
-                <h3>Streetwear Engineering</h3>
-                <p>Dropped shoulders, boxy silhouettes and reinforced seams — designed for the street first, styled for everywhere else.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+  /* ===== Mobile ===== */
+  @media (max-width: 640px){
+    header{padding:16px 16px;}
+    .menu-btn{display:block;order:-1;margin-right:12px;}
+    header{flex-wrap:wrap;}
+    nav{display:none;}
+    .logo{flex:1;}
+    .logo .name{font-size:16px;letter-spacing:2px;}
+    .logo-mark{width:32px;height:32px;}
+    .icons{gap:16px;}
 
-        <section class="section section-light pt-0">
-          <div class="container">
-            <div class="section-head reveal">
-              <div>
-                <span class="eyebrow">Shop the feed</span>
-                <h2 class="section-title">Tag @cladwhale</h2>
-              </div>
-            </div>
-            <div class="reel-row" id="reel-row"></div>
-          </div>
-        </section>
+    .hero{
+      min-height:480px;
+      padding:24px 16px 28px;
+      display:flex;
+      align-items:flex-start;
+    }
+    .hero-bg img{object-position:55% center;}
+    .hero-bg::after{
+      background:
+        linear-gradient(180deg, rgba(5,12,20,0) 55%, var(--bg) 96%),
+        linear-gradient(90deg, var(--bg) 0%, rgba(5,12,20,0.82) 38%, rgba(5,12,20,0.4) 62%, rgba(5,12,20,0) 88%);
+    }
+    .hero-copy{max-width:82%;}
+    .hero-copy h1{font-size:26px;}
+    .hero-copy p{font-size:13px;max-width:100%;}
+    .hero-copy .tag{font-size:11px;}
+    .btn{padding:12px 20px;font-size:12px;}
+    .hero-nums{
+      position:static;
+      transform:none;
+      flex-direction:row;
+      justify-content:flex-start;
+      gap:22px;
+      margin:4px 0 18px;
+    }
+    .hero-nums .line{display:none;}
+    .avatars{flex-wrap:wrap;}
 
-        <section class="section">
-          <div class="container">
-            <div class="section-head reveal">
-              <div>
-                <span class="eyebrow">Customer notes</span>
-                <h2 class="section-title">Real closet energy</h2>
-              </div>
-            </div>
-            <div class="review-grid" id="review-grid"></div>
-          </div>
-        </section>
+    .features{
+      grid-template-columns:1fr 1fr;
+      margin:16px 16px 40px;
+      gap:22px 10px;
+      padding:20px 14px;
+    }
+    .feature{border-right:none;padding:0;}
 
-        <section class="section section-light">
-          <div class="container">
-            <div class="newsletter-band reveal">
-              <span class="eyebrow">One tribe, no labels</span>
-              <h2 class="section-title mt-4">Built for whoever's wearing it.</h2>
-              <p class="mt-4 max-w-2xl text-white/75">Fast product discovery, a touch-friendly cart, clear totals and WhatsApp support keep the shopping flow simple on mobile.</p>
-              <div class="button-row">
-                <a href="products/" class="btn-primary">Start shopping</a>
-                <a href="cart.html" class="btn-secondary">Go to cart</a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+    .collection{padding:0 16px 50px;}
+    .collection-head h2{font-size:22px;}
+    .grid{grid-template-columns:1fr 1fr;gap:14px;}
+    .heart{display:block;}
+  }
 
-      <footer class="footer" id="site-footer"></footer>
-      <a class="whatsapp-float" id="whatsapp-float" aria-label="Chat on WhatsApp">WA</a>
-      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+  @media (min-width:641px) and (max-width:1024px){
+    .hero-nums{display:none;}
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .features{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><span class="dot"></span>FREE SHIPPING ON ORDERS ABOVE ₹1999</div>
+
+<header>
+  <button class="menu-btn" aria-label="Menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <div class="logo">
+    <img src="logo.png" alt="Clad Whale" class="logo-mark">
+    <div class="name">CLAD <span>WHALE</span></div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">HOME</a></li>
+      <li><a href="#">SHOP</a></li>
+      <li><a href="#">COLLECTIONS</a></li>
+      <li><a href="#">ABOUT US</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="icons">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <div class="bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="badge">2</span>
     </div>
-    <script type="module" src="js/home.js"></script>
-  </body>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg">
+    <img src="hero.png" alt="Clad Whale Hoodie">
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-copy">
+      <div class="tag">NEW DROP 2024</div>
+      <h1>BUILT DIFFERENT.<br>MADE TO STAND OUT.</h1>
+      <p>Premium streetwear for those who lead, not follow.</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn-primary">SHOP NOW →</a>
+        <a href="#" class="btn btn-outline">EXPLORE COLLECTION</a>
+      </div>
+      <div class="hero-nums">
+        <span class="num active">01</span>
+        <span class="line"></span>
+        <span class="num">02</span>
+        <span class="line"></span>
+        <span class="num">03</span>
+      </div>
+      <div class="trust">TRUSTED BY 10K+ CUSTOMERS</div>
+      <div class="avatars">
+        <div class="stack">
+          <img src="https://i.pravatar.cc/64?img=12" alt="">
+          <img src="https://i.pravatar.cc/64?img=32" alt="">
+          <img src="https://i.pravatar.cc/64?img=45" alt="">
+          <img src="https://i.pravatar.cc/64?img=15" alt="">
+        </div>
+        <span class="rating">4.8 ★</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 14 6 22l6-3 6 3-3-8"/></svg>
+    <div><h4>PREMIUM QUALITY</h4><p>Finest fabrics &amp; materials</p></div>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="14" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg>
+    <div><h4>FAST DELIVERY</h4><p>Pan India shipping</p></div>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v9l9 5 9-5V8"/><path d="M12 13v9"/></svg>
+    <div><h4>EASY RETURNS</h4><p>Hassle free returns</p></div>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <div><h4>SECURE PAYMENTS</h4><p>100% secure checkout</p></div>
+  </div>
+</section>
+
+<section class="collection">
+  <div class="eyebrow">EXPLORE OUR STYLE</div>
+  <div class="collection-head">
+    <h2>FEATURED COLLECTION</h2>
+    <a href="#" class="view-all">VIEW ALL →</a>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="imgwrap">
+        <svg class="heart" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <img src="https://images.pexels.com/photos/32430590/pexels-photo-32430590.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ocean Depths Tee">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Ocean Depths Tee</h3>
+          <div class="price">₹1,299</div>
+        </div>
+        <button class="plus">+</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgwrap">
+        <svg class="heart" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <img src="https://images.pexels.com/photos/28701959/pexels-photo-28701959.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fracture Hoodie">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Fracture Hoodie</h3>
+          <div class="price">₹2,199</div>
+        </div>
+        <button class="plus">+</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgwrap">
+        <svg class="heart" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <img src="https://images.pexels.com/photos/31700390/pexels-photo-31700390.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Stone Wash Tee">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Stone Wash Tee</h3>
+          <div class="price">₹1,199</div>
+        </div>
+        <button class="plus">+</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgwrap">
+        <svg class="heart" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        <img src="https://images.pexels.com/photos/15626295/pexels-photo-15626295.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nightfall Cargo">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Nightfall Cargo</h3>
+          <div class="price">₹2,399</div>
+        </div>
+        <button class="plus">+</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2024 CLAD WHALE. All rights reserved.</footer>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('nav');
+  menuBtn.addEventListener('click', () => {
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    if(nav.style.display === 'block'){
+      nav.style.position='absolute';
+      nav.style.top='60px';
+      nav.style.left='0';
+      nav.style.right='0';
+      nav.style.background='#0a1420';
+      nav.style.padding='20px';
+      nav.style.zIndex='999';
+      nav.querySelector('ul').style.flexDirection='column';
+      nav.querySelector('ul').style.gap='18px';
+    }
+  });
+</script>
+
+</body>
 </html>
