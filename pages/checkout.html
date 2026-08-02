@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Clad Whale</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+</head>
+<body data-page="checkout">
+  <div data-header></div>
+  <main class="page-shell">
+    <section class="page-hero">
+      <h1 class="page-title">Checkout</h1>
+      <div class="crumbs"><a href="../index.html">Home</a><span>›</span><a href="./cart.html">Cart</a><span>›</span><b>Checkout</b></div>
+    </section>
+
+    <section class="checkout-grid">
+      <form class="panel form-grid" style="padding:26px" data-checkout-form>
+        <h2 class="section-title" style="font-size:32px">Shipping Details</h2>
+        <label class="field">Full Name<input name="name" required placeholder="Arjun Verma"></label>
+        <label class="field">Email<input name="email" type="email" required placeholder="you@example.com"></label>
+        <label class="field">Phone<input name="phone" required placeholder="+91 98765 43210"></label>
+        <label class="field">Address<textarea name="address" required placeholder="House, street, area"></textarea></label>
+        <label class="field">City<input name="city" required placeholder="Mumbai"></label>
+        <label class="field">Pincode<input name="pincode" required placeholder="400001"></label>
+        <h2 class="section-title" style="font-size:32px">Payment</h2>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentMethod" value="cod" checked> Cash on Delivery</label>
+          <label><input type="radio" name="paymentMethod" value="online"> Online Payment with Razorpay</label>
+        </div>
+        <button class="btn btn-primary" type="submit">Place Order</button>
+      </form>
+
+      <aside class="summary-card">
+        <h2 class="section-title" style="font-size:32px">Order Summary</h2>
+        <div class="field" style="margin:12px 0">
+          Coupon
+          <div style="display:grid;grid-template-columns:1fr auto;gap:8px">
+            <input data-coupon placeholder="WHALE10">
+            <button class="btn" type="button" data-apply-coupon>Apply</button>
+          </div>
+        </div>
+        <div data-summary></div>
+      </aside>
+    </section>
+  </main>
+  <div data-bottom-nav></div>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>

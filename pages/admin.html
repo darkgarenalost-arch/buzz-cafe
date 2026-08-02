@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Clad Whale</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js" defer></script>
+</head>
+<body data-page="admin">
+  <main>
+    <section class="admin-login-wrap" id="admin-login">
+      <div class="auth-card">
+        <div class="eyebrow">Admin Dashboard Login</div>
+        <h1 class="admin-title">Clad Whale Admin</h1>
+        <p style="color:var(--muted)">Only authorized admin accounts can access this dashboard. The primary admin is darkgarenalost@gmail.com.</p>
+        <form class="form-grid" id="admin-login-form">
+          <label class="field">Email<input name="email" type="email" required placeholder="darkgarenalost@gmail.com"></label>
+          <label class="field">Password<input name="password" type="password" required></label>
+          <button class="btn btn-primary" type="submit">Login</button>
+          <button class="btn btn-dark" type="button" id="admin-google">Continue With Google</button>
+        </form>
+        <a class="link-cyan" href="../index.html" style="display:block;margin-top:18px">Back To Store</a>
+      </div>
+    </section>
+
+    <section class="admin-shell hidden" id="admin-dashboard">
+      <aside class="admin-sidebar">
+        <a class="brand" href="../index.html"><img src="../images/logo.png" alt="Clad Whale"><span class="brand-word"><span>CLAD</span><span>WHALE</span></span></a>
+        <div style="color:var(--muted);margin-top:18px;font-size:13px" id="admin-email"></div>
+        <nav>
+          <button class="is-active" data-section="overview">Overview</button>
+          <button data-section="orders">Orders</button>
+          <button data-section="products">Products</button>
+          <button data-section="coupons">Coupons</button>
+          <button data-section="banners">Banners</button>
+          <button data-section="admins">Admins</button>
+          <button id="admin-logout">Logout</button>
+        </nav>
+      </aside>
+
+      <div class="admin-main">
+        <section class="admin-section is-active" id="overview">
+          <h1 class="admin-title">Dashboard Overview</h1>
+          <div class="metric-grid">
+            <div class="metric">Total Orders<strong id="metric-orders">0</strong></div>
+            <div class="metric">Total Revenue<strong id="metric-revenue">₹0</strong></div>
+            <div class="metric">Low Stock Products<strong id="metric-low-stock">0</strong></div>
+          </div>
+        </section>
+
+        <section class="admin-section" id="orders">
+          <div style="display:flex;justify-content:space-between;gap:14px;align-items:center">
+            <h1 class="admin-title">Orders</h1>
+            <button class="btn btn-primary" id="export-orders">Export XLSX</button>
+          </div>
+          <div class="table-wrap panel" style="padding:12px"><table><thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Detail</th></tr></thead><tbody id="admin-orders"></tbody></table></div>
+        </section>
+
+        <section class="admin-section" id="products">
+          <h1 class="admin-title">Products</h1>
+          <form class="panel form-grid" id="product-form" style="padding:20px;margin-bottom:20px">
+            <input type="hidden" name="id">
+            <label class="field">Name<input name="name" required></label>
+            <label class="field">Category<select name="category"><option>T-Shirts</option><option>Hoodies</option><option>Bottoms</option><option>Jackets</option><option>Accessories</option></select></label>
+            <label class="field">Price<input name="price" type="number" required></label>
+            <label class="field">Stock<input name="stock" type="number" required></label>
+            <label class="field">Default Size<input name="size" value="M"></label>
+            <label class="field">Color<input name="color" value="Black"></label>
+            <label class="field">Image URL<input name="imageUrl" placeholder="https://... or images/products/file.png"></label>
+            <label class="field">Upload Product Image<input name="imageFile" type="file" accept="image/*"></label>
+            <label class="field">Description<textarea name="description"></textarea></label>
+            <label class="field">Features, one per line<textarea name="features"></textarea></label>
+            <button class="btn btn-primary" type="submit">Save Product</button>
+          </form>
+          <div class="table-wrap panel" style="padding:12px"><table><thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead><tbody id="admin-products"></tbody></table></div>
+        </section>
+
+        <section class="admin-section" id="coupons">
+          <h1 class="admin-title">Coupons</h1>
+          <form class="panel form-grid" id="coupon-form" style="padding:20px;margin-bottom:20px">
+            <label class="field">Code<input name="code" required placeholder="WHALE10"></label>
+            <label class="field">Type<select name="type"><option value="percent">Percent</option><option value="fixed">Fixed</option></select></label>
+            <label class="field">Value<input name="value" type="number" required></label>
+            <button class="btn btn-primary" type="submit">Create Coupon</button>
+          </form>
+          <div class="table-wrap panel" style="padding:12px"><table><thead><tr><th>Code</th><th>Type</th><th>Value</th><th>Status</th><th>Actions</th></tr></thead><tbody id="admin-coupons"></tbody></table></div>
+        </section>
+
+        <section class="admin-section" id="banners">
+          <h1 class="admin-title">Website Banners</h1>
+          <form class="panel form-grid" id="banner-form" style="padding:20px">
+            <label class="field">Hero Eyebrow<input name="eyebrow" value="NEW DROP 2024"></label>
+            <label class="field">Hero Headline<input name="headline" value="BUILT DIFFERENT. MADE TO STAND OUT."></label>
+            <label class="field">Hero Copy<textarea name="copy">Premium streetwear for those who lead, not follow.</textarea></label>
+            <label class="field">Hero Image URL<input name="image" value="images/hero.png"></label>
+            <button class="btn btn-primary" type="submit">Save Banner</button>
+          </form>
+        </section>
+
+        <section class="admin-section" id="admins">
+          <h1 class="admin-title">Admin Accounts</h1>
+          <form class="panel form-grid" id="admin-account-form" style="padding:20px">
+            <p style="color:var(--muted)">Add future dashboard admins here. Store Firebase security rules should mirror this admin collection before launch.</p>
+            <label class="field">Google Account Email<input name="email" type="email" required placeholder="new-admin@example.com"></label>
+            <button class="btn btn-primary" type="submit">Add Admin</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | Clad Whale</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="account">
+  <div data-header></div>
+  <main class="page-shell">
+    <section class="page-hero">
+      <h1 class="page-title">My Account</h1>
+      <div class="crumbs">Manage your orders and account details</div>
+    </section>
+
+    <section class="account-card panel">
+      <div class="profile-row">
+        <div class="profile-pic"><img src="../images/products/profile-hoodie.png" alt="Profile"></div>
+        <div>
+          <h2 style="font-size:31px;margin:0 0 10px" data-user-name>Arjun Verma</h2>
+          <div style="color:var(--muted);font-size:20px" data-user-email>arjunverma@example.com</div>
+          <div style="color:var(--muted);font-size:20px;margin-top:18px">+91 98765 43210</div>
+        </div>
+        <a class="btn" href="./login.html">Edit Profile</a>
+      </div>
+      <div class="stats" data-account-stats></div>
+    </section>
+
+    <section class="menu-list panel" data-account-menu></section>
+
+    <section class="club-card panel">
+      <img src="../images/products/member-whale.png" alt="Clad Whale Club">
+      <div>
+        <h2 style="margin:0 0 10px;text-transform:uppercase">Clad Whale Club <span style="padding:5px 10px;border-radius:8px;background:rgba(8,191,255,.18);color:var(--cyan);font-size:16px">Member</span></h2>
+        <p style="color:var(--muted);font-size:19px;line-height:1.45">You are a premium member.<br>Enjoy exclusive drops and offers.</p>
+        <a class="link-cyan" href="./shop.html">View Benefits →</a>
+      </div>
+    </section>
+  </main>
+  <div data-bottom-nav></div>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>

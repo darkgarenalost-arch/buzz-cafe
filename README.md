@@ -1,46 +1,55 @@
-# Clad Whale
+# Clad Whale Ecommerce Website
 
-Premium static ecommerce website for Clad Whale, a unisex streetwear label with a black, white and grey monochrome visual system.
+Premium clothing ecommerce website built with plain HTML, CSS, and JavaScript.
 
-## Included
+## Structure
 
-- Cinematic homepage with rotating banners
-- Category cards, new arrivals, best sellers, reviews, reel-style product sections
-- Product listing and product detail pages
-- Local cart with mobile-first checkout
-- COD-first order flow
-- Razorpay Checkout test integration
-- Firebase Auth admin login
-- Firestore product, order, coupon, banner and settings management
-- Firebase Storage uploads for product images, banners, logo and favicon
-- Firestore and Storage security rules
-- SEO tags, sitemap and robots
-- Vercel and Netlify static deploy config
+- `index.html` - Home
+- `pages/` - Shop, Product Details, Wishlist, Cart, Checkout, Login, Sign Up, Account, Admin Dashboard
+- `css/` - Shared responsive styling
+- `js/` - Storefront, admin, data, Firebase, and Razorpay scripts
+- `firebase/` - Firebase configuration
+- `images/` - Approved logo, hero, preview, and product assets
+- `icons/`, `fonts/`, `utils/` - Organized support folders
 
-## Start locally
+## Firebase
 
-Use any static server from inside this folder:
+Firebase is initialized from `firebase/firebase-config.js` using the supplied Clad Whale project configuration.
 
-```bash
-python -m http.server 5500
+The admin allowlist starts with:
+
+```txt
+darkgarenalost@gmail.com
 ```
 
-If Python is not installed, VS Code Live Server, Netlify Dev, Vercel static preview, or any simple static-file server will work.
+Additional admins can be added from the Admin Dashboard. Before production launch, mirror the `admins` collection in Firebase security rules so admin-only writes are enforced server-side.
+
+## Razorpay
+
+The checkout flow is ready for Razorpay. Add the live/test key in:
+
+```txt
+js/razorpay.js
+```
+
+Replace:
+
+```js
+keyId: "ADD_RAZORPAY_KEY_ID_HERE"
+```
+
+with your Razorpay Key ID. Keep Razorpay Key Secret on a server or Cloud Function, never in browser JavaScript.
+
+## Local Preview
+
+Run from the project root:
+
+```bash
+python -m http.server 5177 --bind 127.0.0.1
+```
 
 Then open:
 
-- Storefront: `http://localhost:5500/`
-- Admin: `http://localhost:5500/admin/login.html`
-
-Opening files directly from disk may block JavaScript modules in some browsers, so a static server is recommended.
-
-## Configure
-
-Edit:
-
-- `firebase/firebase-config.js`
-- `firebase/firestore.rules`
-- `firebase/storage.rules`
-- `docs/SETUP.md`
-
-The site has fallback demo data, so it looks complete before Firebase is connected.
+```txt
+http://127.0.0.1:5177/
+```

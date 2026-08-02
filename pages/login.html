@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Clad Whale</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="account">
+  <div data-header></div>
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <div class="eyebrow">Clad Whale Account</div>
+      <h1 class="auth-title" data-auth-title>Login</h1>
+      <form class="form-grid" data-auth-form>
+        <input type="hidden" data-auth-mode value="login">
+        <label class="field hidden" data-name-field>Name<input name="name" autocomplete="name"></label>
+        <label class="field">Email<input name="email" type="email" required autocomplete="email"></label>
+        <label class="field">Password<input name="password" type="password" required autocomplete="current-password"></label>
+        <div class="auth-actions">
+          <button class="btn btn-primary" type="submit" data-auth-submit>Login</button>
+          <button class="btn btn-dark" type="button" data-google-login>Continue With Google</button>
+          <button class="btn" type="button" data-toggle-auth>Create a new account</button>
+        </div>
+      </form>
+      <a class="link-cyan" href="./admin.html" style="display:block;margin-top:18px">Admin Dashboard Login</a>
+    </section>
+  </main>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>
