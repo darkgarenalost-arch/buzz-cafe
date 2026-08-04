@@ -451,6 +451,31 @@ img {
   stroke-linejoin: round;
 }
 
+.btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.qty svg {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-row svg {
+  width: 22px;
+  height: 22px;
+}
+
+.float-actions svg {
+  width: 26px;
+  height: 26px;
+}
+
+.payment-options svg {
+  width: 20px;
+  height: 20px;
+}
+
 .feature strong {
   display: block;
   font-size: 14px;
@@ -1167,6 +1192,12 @@ img {
   box-shadow: inset 0 0 18px rgba(8, 191, 255, 0.18), 0 0 18px rgba(8, 191, 255, 0.22);
 }
 
+.detail-buttons .btn.is-active {
+  color: #00131d;
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+
 .mini-features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1181,9 +1212,15 @@ img {
   padding: 0 20px;
 }
 
-.auth-wrap,
-.admin-login-wrap {
+.auth-wrap {
   min-height: calc(100vh - 86px);
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+}
+
+.admin-login-wrap {
+  min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 40px 20px;

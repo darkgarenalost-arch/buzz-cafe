@@ -155,7 +155,12 @@ function toggleWishlist(id) {
   const wish = getWish();
   const next = wish.includes(id) ? wish.filter((item) => item !== id) : [...wish, id];
   setWish(next);
-  document.querySelectorAll(`[data-wish="${id}"]`).forEach((button) => button.classList.toggle("is-active", next.includes(id)));
+  const active = next.includes(id);
+  document.querySelectorAll(`[data-wish="${id}"]`).forEach((button) => {
+    button.classList.toggle("is-active", active);
+    const label = button.querySelector("[data-wish-label]");
+    if (label) label.textContent = active ? "Added To Wishlist" : "Add To Wishlist";
+  });
 }
 
 function productCard(product, options = {}) {
@@ -376,7 +381,7 @@ function renderProductDetail() {
       </div>
       <div class="detail-buttons">
         <button class="btn" data-detail-add="${product.id}">${icons.bag} Add To Cart</button>
-        <button class="btn btn-dark" data-wish="${product.id}">${icons.heart} Add To Wishlist</button>
+        <button class="btn btn-dark ${getWish().includes(product.id) ? "is-active" : ""}" data-wish="${product.id}">${icons.heart} <span data-wish-label>${getWish().includes(product.id) ? "Added To Wishlist" : "Add To Wishlist"}</span></button>
       </div>
       <div class="mini-features">${featuresMarkup()}</div>
     </section>
@@ -398,7 +403,10 @@ function bindProductDetail() {
     }
 
     const add = event.target.closest("[data-detail-add]");
-    if (add) addToCart(add.dataset.detailAdd, qty);
+    if (add) {
+      addToCart(add.dataset.detailAdd, qty);
+      add.animate([{ transform: "scale(1)" }, { transform: "scale(1.04)" }, { transform: "scale(1)" }], { duration: 220 });
+    }
   });
 }
 
