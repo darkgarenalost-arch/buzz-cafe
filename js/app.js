@@ -247,8 +247,12 @@ function cartTotals() {
   const cart = getCart();
   const subtotal = cart.reduce((sum, item) => sum + findProduct(item.id).price * item.qty, 0);
   const shipping = subtotal > 0 && subtotal < 1999 ? 99 : 0;
-  const discount = Number(localStorage.getItem("cw_discount") || 0);
+  const discount = subtotal > 0 ? Number(localStorage.getItem("cw_discount") || 0) : 0;
   return { subtotal, shipping, discount, total: Math.max(0, subtotal + shipping - discount) };
+}
+
+function clearDiscount() {
+  localStorage.removeItem("cw_discount");
 }
 
 function renderCart() {
@@ -275,7 +279,7 @@ function renderCart() {
           </div>
           <div class="cart-actions">
             <div class="icon-row">
-              <button data-wish="${product.id}" aria-label="Move to wishlist">${icons.heart}</button>
+              <button data-move-wish="${product.id}" aria-label="Move to wishlist">${icons.heart}</button>
               <button data-remove="${product.id}" aria-label="Remove item">${icons.trash}</button>
             </div>
             <strong class="price">${formatPrice(product.price * item.qty)}</strong>
@@ -308,6 +312,15 @@ function bindCart() {
     const dec = event.target.closest("[data-dec]");
     const remove = event.target.closest("[data-remove]");
     const clear = event.target.closest("[data-clear-cart]");
+    const moveWish = event.target.closest("[data-move-wish]");
+
+    if (moveWish) {
+      const id = moveWish.dataset.moveWish;
+      const wish = getWish();
+      if (!wish.includes(id)) setWish([...wish, id]);
+      setCart(cart.filter((entry) => entry.id !== id));
+      renderCart();
+    }
 
     if (inc || dec) {
       const id = (inc || dec).dataset[inc ? "inc" : "dec"];
@@ -324,6 +337,7 @@ function bindCart() {
 
     if (clear && confirm("Clear all items from cart?")) {
       setCart([]);
+      clearDiscount();
       renderCart();
     }
   });
@@ -428,6 +442,10 @@ function renderAccount() {
       location.href = pageHref("login.html");
     } else alert(`${action} will show live Firebase data after customer records are added.`);
   });
+
+  document.querySelector("[data-edit-profile]")?.addEventListener("click", () => {
+    alert("Profile editing will connect once Firebase profile fields are added.");
+  });
 }
 
 function bindAuth() {
@@ -512,6 +530,7 @@ function bindCheckout() {
           order.status = "Paid";
           await saveOrder(order);
           setCart([]);
+          clearDiscount();
           location.href = pageHref("account.html#orders");
         }
       });
@@ -521,6 +540,7 @@ function bindCheckout() {
 
     await saveOrder(order);
     setCart([]);
+    clearDiscount();
     alert("Order placed successfully.");
     location.href = pageHref("account.html#orders");
   });
